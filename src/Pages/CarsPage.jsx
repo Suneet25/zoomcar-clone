@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
-import { AppContext } from "../AppContext/AppContextProvider";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getCarData } from "../Redux/CarsData/carsData.action";
 
 const CarsPage = () => {
-  const { carsData } = useContext(AppContext);
-  console.log(carsData);
+  const dispatch = useDispatch();
+  const { loading, error, data } = useSelector((state) => state.cars);
+
+  console.log("datamain Cars Page", data);
+  useEffect(() => {
+    dispatch(getCarData());
+  }, []);
 
   return <>hy</>;
 };
