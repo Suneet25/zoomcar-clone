@@ -1,13 +1,10 @@
 import "./App.css";
-import AllRoutes from "./Components/AllRoutes";
-import CarsPage from "./Pages/CarsPage";
+// import Home from "./Pages/HomePage/Home";
+
+// import AllRoutes from "./Components/AllRoutes";
 
 function App() {
-  return (
-    <div className="App">
-      <AllRoutes />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
