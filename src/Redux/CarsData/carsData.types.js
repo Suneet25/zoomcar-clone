@@ -1,5 +1,20 @@
-export const CARSDATA_GET_LOADING = "carsdata/get/loading";
-export const CARSDATA_GET_SUCCESS = "carsdata/get/success";
-export const CARSDATA_GET_ERROR = "carsdata/get/error";
 
-export const CARSDATA_RESET = "carsdata/reset/";
+export const CARS_LOADING = "CARS_LOADING";
+export const CARS_SUCCESS = "CARS_SUCCESS";
+export const CARS_FAILURE = "CARS_FAILURE";
+
+export const ACCENDING_LOADING = "ACCENDING_LOADING";
+export const ACCENDING_SUCCESS = "ACCENDING_SUCCESS";
+export const ACCENDING_ERROR = "ACCENDING_ERROR";
+
+export const DESCENDING_LOADING = "DESCENDING_LOADING";
+export const DESCENDING_SUCCESS = "DESCENDING_SUCCESS";
+export const DESCENDING_FAILURE = "DESCENDING_FAILURE";
+
+// export const DESCENDING_LOADING = "DESCENDING_LOADING";
+// export const DESCENDING_SUCCESS = "DESCENDING_SUCCESS";
+// export const DESCENDING_FAILURE = "DESCENDING_FAILURE";
+
+// export const DESCENDING_LOADING = "DESCENDING_LOADING";
+// export const DESCENDING_SUCCESS = "DESCENDING_SUCCESS";
+// export const DESCENDING_FAILURE = "DESCENDING_FAILURE";
