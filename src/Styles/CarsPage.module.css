@@ -23,27 +23,36 @@
 
 .ButtonFirstGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  gap: 0.5rem 1rem;
-  /* border: 1px solid blue; */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
-.ButtonFirstGrid div {
+.FirstFilters {
   border: 1px solid black;
   border-radius: 7px;
   padding: 0.6rem 1rem;
   cursor: pointer;
+  text-align: left;
+  font-size: 16px;
 }
 
-.ButtonFirstGrid div:hover {
-  background-color: rgb(221, 221, 221);
+.ButtonFirstGrid button {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.ButtonFirstGrid button:hover {
+  background-color: rgb(237, 237, 237);
   transition: 0.5s;
 }
-.ButtonFirstGrid div span {
-  font-size: 13px;
-  font-weight: 500;
+.ButtonFirstGrid div:hover {
+  background-color: rgb(237, 237, 237);
+  transition: 0.5s;
 }
 
 .Rightsection {
@@ -80,6 +89,18 @@
   height: 1rem;
   border: 1px solid black;
   position: absolute;
+}
+
+.mappingImg {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+.mappingImg:hover {
+  transform: scale(1.06);
+  transition: 0.8s;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1080px) {
@@ -129,6 +150,13 @@
     grid-template-columns: repeat(1, 1fr);
     column-gap: 3rem;
     row-gap: 2rem;
+  }
+  .ButtonFirstGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 319px) {

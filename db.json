@@ -8,7 +8,7 @@
       "class": "Sports",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -19,7 +19,7 @@
       "class": "Military vehicle",
       "price": 2500,
       "transmission": "Auto",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 5,
       "fueltype": "Petrol"
     },
@@ -31,7 +31,7 @@
       "class": "Mid-size luxury crossover SUV",
       "price": 5000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol",
       "type": "SUV"
@@ -44,7 +44,7 @@
       "class": "Supermini",
       "price": 6000,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 3,
       "fueltype": "Diesel"
     },
@@ -56,7 +56,7 @@
       "class": "Concept car",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -68,7 +68,7 @@
       "class": "Full-size Ford",
       "price": 5400,
       "transmission": "Manual",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 4.6,
       "fueltype": "Diesel"
     },
@@ -80,7 +80,7 @@
       "class": "Muscle car(today) and Race car(Past)",
       "price": 4400,
       "transmission": "Auto",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -92,7 +92,7 @@
       "class": "Executive car",
       "price": 6000,
       "transmission": "Manual",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 3.1,
       "fueltype": "Petrol"
     },
@@ -104,7 +104,7 @@
       "class": "Compact",
       "price": 2000,
       "transmission": "Auto",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 5,
       "fueltype": "Diesel"
     },
@@ -116,7 +116,7 @@
       "class": "Compact executive car",
       "price": 7400,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -128,7 +128,7 @@
       "class": "Full-size luxury car",
       "price": 2000,
       "transmission": "Auto",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 2,
       "fueltype": "Petrol"
     },
@@ -140,7 +140,7 @@
       "class": "Midsize",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -152,7 +152,7 @@
       "class": "Full-size",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -164,7 +164,7 @@
       "class": "Roadster, coupe",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -176,7 +176,7 @@
       "class": "Small family car",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 5,
       "fueltype": "Petrol"
     },
@@ -188,7 +188,7 @@
       "class": "Mid-size",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 3,
       "fueltype": "Diesel"
     },
@@ -200,7 +200,7 @@
       "class": "Subcompact",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -211,7 +211,7 @@
       "class": "Small family car",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -223,7 +223,7 @@
       "class": "Compact car",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -235,7 +235,7 @@
       "class": "Sport compact",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -247,7 +247,7 @@
       "class": "Sports",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -259,7 +259,7 @@
       "class": "Grand tourer",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -271,7 +271,7 @@
       "class": "Full-size",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -283,7 +283,7 @@
       "class": "Full-size personal luxury car",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -295,7 +295,7 @@
       "class": "Mid-size",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -307,7 +307,7 @@
       "class": "Sport compact",
       "price": 2500,
       "transmission": "Manual",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 4.5,
       "fueltype": "Petrol",
       "type": "Hatchback"
@@ -319,7 +319,7 @@
       "class": "Full-size CUV / Large MPV",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -331,7 +331,7 @@
       "class": "Compact / Small family car",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -342,7 +342,7 @@
       "class": "Sport",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -354,7 +354,7 @@
       "class": "Mid-size luxury crossover SUV",
       "price": 3500,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel",
       "type": "SUV"
@@ -367,7 +367,7 @@
       "class": "Sports",
       "price": 2200,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -379,7 +379,7 @@
       "class": "Compact",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 4.2,
       "fueltype": "Diesel"
     },
@@ -391,7 +391,7 @@
       "class": "Compact",
       "price": 5600,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Petrol"
     },
@@ -403,7 +403,7 @@
       "class": "Luxury roadster",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -415,7 +415,7 @@
       "class": "Large family car",
       "price": 6700,
       "transmission": "Manual",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 4.9,
       "fueltype": "Petrol"
     },
@@ -428,7 +428,7 @@
       "class": "Compact",
       "price": 3000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -440,7 +440,7 @@
       "class": "Minivan",
       "price": 9600,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.2,
       "fueltype": "Petrol"
     },
@@ -452,7 +452,7 @@
       "class": "Sports",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 4.5,
       "fueltype": "Diesel"
     },
@@ -464,7 +464,7 @@
       "class": "Full-size SUV",
       "price": 9000,
       "transmission": "Auto",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 3.9,
       "fueltype": "Petrol",
       "type": "SUV"
@@ -477,7 +477,7 @@
       "class": "Luxury roadster",
       "price": 2000,
       "transmission": "Manual",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 4.2,
       "fueltype": "Diesel"
     },
@@ -489,7 +489,7 @@
       "class": "Luxury roadster",
       "price": 2000,
       "transmission": "Auto",
-      "seats": "4 Seats",
+      "seats": "4-Seats",
       "rating": 5,
       "fueltype": "Diesel",
       "type": "Sedan"
@@ -502,7 +502,7 @@
       "class": "Sports",
       "price": 2000,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 5,
       "fueltype": "Diesel",
       "type": "Sedan"
@@ -515,7 +515,7 @@
       "class": "Sports",
       "price": 20000,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 5,
       "fueltype": "Diesel",
       "type": "Sedan"
@@ -528,7 +528,7 @@
       "class": "Sports",
       "price": 22000,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 5,
       "fueltype": "Diesel",
       "type": "Sedan"
@@ -541,7 +541,7 @@
       "class": "Sports",
       "price": 22000,
       "transmission": "Auto",
-      "seats": "2 Seats",
+      "seats": "2-Seats",
       "rating": 5,
       "fueltype": "Diesel",
       "type": "Hatchback"

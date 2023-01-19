@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import cars from "../../Styles/CarsPage.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineStar } from "react-icons/ai";
 import { FaCarSide } from "react-icons/fa";
 import { GiCarSeat } from "react-icons/gi";
@@ -14,11 +14,12 @@ import { getCarsData } from "../../Redux/CarsData/carsData.action";
 const CarsPage = () => {
   const dispatch = useDispatch();
   const [CarsData, setCarsData] = useState([]);
+  const [CarType, setCarType] = useState("");
+  const [CarSeat, setCarSeat] = useState("");
   const { data } = useSelector((store) => store.CarsReducer);
   /* So basically here i'm getting data form store and setting into setCarsAPIData(data)
     and passing CarsAPIData when it change useEffect re-rendor and it work until data length...
     */
-
 
   const handleReset = () => {
     setCarsData(data);
@@ -29,7 +30,7 @@ const CarsPage = () => {
       return a.price - b.price;
     });
     setCarsData(sortfunc);
-    console.log(" low to high", sortfunc);
+    // console.log(" low to high", sortfunc);
   };
 
   const handleHightoLow = () => {
@@ -48,55 +49,31 @@ const CarsPage = () => {
     // console.log(" sort high to low", BestRating);
   };
 
-  // const handleCarTypes = (e) => {
-  //   const CarTypesvalue = data.filter((el, i) => {
-  //     if (el.type === e.target.value) {
-  //       return data;
-  //     }
-  //   });
-  //   setCarsData(CarTypesvalue);
-  //   console.log("Filter data", CarTypesvalue);
-  // };
-
-  const handleCarTypesSUV = () => {
-    const CarTypesvalue = data.filter((el, i) => {
-      if (el.type === "SUV") {
-        return data;
-      }
-    });
-    setCarsData(CarTypesvalue);
-    // console.log("Filter data", CarTypesvalue);
-  };
-  const handleCarTypesSedan = () => {
-    const CarTypesvalue = data.filter((el, i) => {
-      if (el.type === "Sedan") {
-        return data;
-      }
-    });
-    setCarsData(CarTypesvalue);
-    // console.log("Filter data", CarTypesvalue);
-  };
-  const handleCarTypesHatchBack = () => {
-    const CarTypesvalue = data.filter((el, i) => {
-      if (el.type === "Hatchback") {
-        return data;
-      }
-    });
-    setCarsData(CarTypesvalue);
-    // console.log("Filter data", CarTypesvalue);
+  /* Filter Function */
+  const handleFilterCarTypes = (e) => {
+    const CarTypeData = data.filter((ele) => ele.type === e.target.value);
+    setCarsData(CarTypeData);
+    // console.log('CarTypeData:', CarTypeData)
   };
 
-  // const BestRating = data.filter((ele) => ele.rating == e.target.value);
-  // setMet(BestRating);
+  const handleCarSeats = (e) => {
+    const CarSeatData = data.filter((ele) => ele.seats === e.target.value);
+    setCarsData(CarSeatData);
+    // console.log("CarSeatData", CarSeatData);
+  };
 
-  const abc = () => {
-    // let newdata;
-    // const typeFilter = (type) => {
-    //   newdata = data.filter((el, i) => {
-    //     if (el.type === type) {
-    //       return newdata;
-    //     }
-    //   });
+  const handleCarTransmission = (e) => {
+    const CarTransmissionData = data.filter(
+      (ele) => ele.transmission === e.target.value
+    );
+    setCarsData(CarTransmissionData);
+    // console.log("CarTransmissionData", CarTransmissionData);
+  };
+
+  const handleCarFuel = (e) => {
+    const CarFuel = data.filter((ele) => ele.fueltype === e.target.value);
+    setCarsData(CarFuel);
+    // console.log("CarFuel", CarFuel);
   };
 
   useEffect(() => {
@@ -107,11 +84,6 @@ const CarsPage = () => {
     setCarsData(data);
   }, [setCarsData, data.length]);
 
-  /* 
-
-    className={cars. }
-  */
-  //  else
   return (
     <>
       <div className={cars.IndexMain}>
@@ -128,110 +100,119 @@ const CarsPage = () => {
           <br />
           <p>Sort By</p>
           <div className={cars.ButtonFirstGrid}>
-            <div onClick={handleLowtoHigh}>
+            <div className={cars.FirstFilters} onClick={handleLowtoHigh}>
               <BiRupee className={cars.icons} />
               <span>Low to High</span>
             </div>
-            <div onClick={handleHightoLow}>
+            <div className={cars.FirstFilters} onClick={handleHightoLow}>
               <BiRupee className={cars.icons} />
               <span>High to Low</span>
             </div>
-            <div onClick={(e) => handleBestRating(e)}>
+            <div
+              className={cars.FirstFilters}
+              onClick={(e) => handleBestRating(e)}
+            >
               <AiOutlineStar className={cars.icons} />
               <span>Best Rating</span>
             </div>
           </div>
 
+          {/* Car Type Section */}
           <br />
           <p>Car type</p>
           <div className={cars.ButtonFirstGrid}>
-            <div onClick={(e) => handleCarTypesSUV("SUV")}>
+            <button value="SUV" onClick={(e) => handleFilterCarTypes(e)}>
               <FaCarSide className={cars.icons} />
-              <span>SUV</span>
-            </div>
-            <div onClick={() => handleCarTypesSedan("Sedan")}>
+              SUV
+            </button>
+            <button value="Sedan" onClick={(e) => handleFilterCarTypes(e)}>
               <FaCarSide className={cars.icons} />
-              <span>Sedan</span>
-            </div>
-            <div onClick={() => handleCarTypesHatchBack("Hatchback")}>
+              Sedan
+            </button>
+            <button value="Hatchback" onClick={(e) => handleFilterCarTypes(e)}>
               <FaCarSide className={cars.icons} />
-              <span>Hatchback</span>
-            </div>
+              Hatchback
+            </button>
           </div>
 
+          {/* Car Seats */}
           <br />
           <p>Seats Type</p>
           <div className={cars.ButtonFirstGrid}>
-            <div>
-              <GiCarSeat className={cars.icons} />
-              <span>2 Seats</span>
-            </div>
-            <div>
-              <GiCarSeat className={cars.icons} />
-              <span>4 Seats</span>
-            </div>
+            <button value="2-Seats" onClick={(e) => handleCarSeats(e)}>
+              <GiCarSeat className={cars.icons} />2 Seats
+            </button>
+            <button value="4-Seats" onClick={(e) => handleCarSeats(e)}>
+              <GiCarSeat className={cars.icons} />4 Seats
+            </button>
           </div>
 
+          {/* Cars transmission */}
           <br />
           <p>Transmission</p>
           <div className={cars.ButtonFirstGrid}>
-            <div>
+            <button value="Manual" onClick={(e) => handleCarTransmission(e)}>
               <GiGearStickPattern className={cars.icons} />
-              <span>Manual</span>
-            </div>
-            <div>
+              Manual
+            </button>
+            <button value="Auto" onClick={(e) => handleCarTransmission(e)}>
               <GiGearStickPattern className={cars.icons} />
-              <span>Auto</span>
-            </div>
+              Auto
+            </button>
           </div>
 
+          {/* Cars Fuel */}
           <br />
           <p>Fuel</p>
           <div className={cars.ButtonFirstGrid}>
-            <div>
+            <button value="Petrol" onClick={(e) => handleCarFuel(e)}>
               <FaGasPump className={cars.icons} />
-              <span>Petrol</span>
-            </div>
-            <div>
+              Petrol
+            </button>
+            <button value="Diesel" onClick={(e) => handleCarFuel(e)}>
               <FaGasPump className={cars.icons} />
-              <span>Diesal</span>
-            </div>
+              Diesal
+            </button>
           </div>
         </div>
 
         <div className={cars.Rightsection}>
           {CarsData.map((items, i) => (
-            <div key={i} className={cars.mappingContainer}>
-              <div>
-                <img
-                  style={{
-                    width: "350px",
-                    height: "220px",
-                    borderRadius: "5px",
-                  }}
-                  src={items.image}
-                  alt=""
-                />
-              </div>
-              <div style={{ marginTop: "0.6rem" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <h1 className={cars.RightsectionH1}>{items.title}</h1>
-                  <p style={{ paddingRight: "1.5rem" }}>⭐ {items.rating}</p>
+            <Link to={`/cars/${items.id}`}>
+              <div key={i} className={cars.mappingContainer}>
+                <div>
+                  <img
+                    className={cars.mappingImg}
+                    style={{
+                      width: "360px",
+                      height: "220px",
+                      borderRadius: "5px",
+                    }}
+                    src={items.image}
+                    alt=""
+                  />
                 </div>
-                <div className={cars.RightsectionSpans}>
-                  <span>{items.fueltype}</span>
-                  <span>{items.seats}</span>
-                  <span>{items.type}</span>
+                <div style={{ marginTop: "0.6rem" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h1 className={cars.RightsectionH1}>{items.title}</h1>
+                    <p style={{ paddingRight: "1.5rem" }}>⭐ {items.rating}</p>
+                  </div>
+                  <div className={cars.RightsectionSpans}>
+                    <span>{items.fueltype} </span>
+                    <span>{items.seats}</span>
+                    <span>{items.type}</span>
+                    <span>{items.transmission}</span>
+                  </div>
+                  <h1 className={cars.RightsectionH1}>₹ {items.price}</h1>
                 </div>
-                <h1 className={cars.RightsectionH1}>₹ {items.price}</h1>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

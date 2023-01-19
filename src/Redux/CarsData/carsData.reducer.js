@@ -1,4 +1,11 @@
-import { CARS_FAILURE, CARS_LOADING, CARS_SUCCESS } from "./carsData.types";
+import {
+  CARS_FAILURE,
+  CARS_LOADING,
+  CARS_SUCCESS,
+  SINGLE_CARS_FAILURE,
+  SINGLE_CARS_LOADING,
+  SINGLE_CARS_SUCCESS,
+} from "./carsData.types";
 
 const initialState = {
   loading: false,
@@ -31,6 +38,28 @@ export const CarsPageReducer = (state = initialState, { type, payload }) => {
       };
     }
 
+    case SINGLE_CARS_LOADING: {
+      return {
+        ...state,
+        loading: true,
+        error: false,
+      };
+    }
+    case SINGLE_CARS_SUCCESS: {
+      return {
+        ...state,
+        data: payload,
+        loading: false,
+        error: false,
+      };
+    }
+    case SINGLE_CARS_FAILURE: {
+      return {
+        ...state,
+        loading: false,
+        error: true,
+      };
+    }
     default: {
       return state;
     }
