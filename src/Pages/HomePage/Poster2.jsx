@@ -1,20 +1,19 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 
-const Middle = () => {
+const Poster2 = () => {
   return (
     <Box>
-      <Box>
+      <Box style={{ position: "relative" }}>
         <Box
           style={{
             width: "100%",
             height: "680px",
             // border: "2px solid red",
-            position: "relative",
           }}
         >
           <img
-            src="https://www.zoomcar.com/img/hero-banner-web.png"
+            src="https://zoomcar-assets.zoomcar.com/images/original/97c77ce8da5affded5e3c4bde712044a90728781.png?1672044755"
             alt="d"
             style={{ height: "100%", width: "100%" }}
           />
@@ -22,7 +21,7 @@ const Middle = () => {
         <Box
           style={{
             position: "absolute",
-            top: "20%",
+            top: "5%",
             left: "17%",
 
             backgroundColor: "rgba(0,0,0,0.4)",
@@ -42,10 +41,11 @@ const Middle = () => {
               textAlign: "center",
             }}
           >
-            The perfect car for your next trip is just around the corner
+            Largest car sharing marketplace
           </Heading>
           <Heading as={"h4"} size="md" mt="20px" textAlign="center">
-            Book your drive now!
+            Sedans for short distances, SUVs for tough terrains, luxury cars for
+            surprises - we’ve got it all!
           </Heading>
         </Box>
         <Box
@@ -68,13 +68,27 @@ const Middle = () => {
               color: "#1f1f1f",
             }}
           >
-            CHOOSE FROM OUR WIDE RANGE OF CAR
+            UNMATCHED BENEFITS
+          </Heading>
+          <Heading
+            style={{
+              textAlign: "center",
+              fontFamily: "IBM Plex Sans",
+
+              fontWeight: "300",
+
+              color: "#1f1f1f",
+              marginTop: "20px",
+            }}
+            as={"h6"}
+            size="md"
+          >
+            Drive everywhere with freedom
           </Heading>
         </Box>
-        <Box className="HomePage_Corosel"></Box>
       </Box>
     </Box>
   );
 };
 
-export default Middle;
+export default Poster2;

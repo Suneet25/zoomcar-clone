@@ -223,7 +223,18 @@ const Navbar = () => {
             className="navBarRightSide"
           >
             <Text fontWeight={"600"} fontSize="18px">
-              <Link to="/host">Become a Host</Link>
+              <Link to="/host">
+                <Button
+                  className="Host"
+                  style={{
+                    color: "black",
+                    backgroundColor: "white",
+                    borderRadius: "30px",
+                  }}
+                >
+                  Become a Host
+                </Button>
+              </Link>
             </Text>
             <Text fontWeight={"600"} fontSize="18px">
               <Link to="/zms">ZMS</Link>
@@ -362,7 +373,18 @@ const Navbar = () => {
               width="40%"
             >
               <Text fontWeight={"600"} fontSize="auto">
-                <Link to="/host">Become a Host</Link>
+                <Link to="/host">
+                  <Button
+                    className="Host"
+                    style={{
+                      color: "black",
+                      backgroundColor: "white",
+                      borderRadius: "30px",
+                    }}
+                  >
+                    Become a Host
+                  </Button>
+                </Link>
               </Text>
               <Text fontWeight={"600"} fontSize="auto">
                 <Link to="/zms">ZMS</Link>
