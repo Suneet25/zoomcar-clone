@@ -7,10 +7,10 @@ import Wallet from "./Pages/Payment/Wallet";
 
 function App() {
   return <div className="App">
-    {/* <Payment /> */}
+    <Payment />
     <Wallet/>
-    {/* <Banking/> */}
-    {/* <Credit/> */}
+    <Banking/>
+    <Credit/>
   </div>;
 }
 
