@@ -85,7 +85,7 @@
 @media only screen and (min-width: 769px) and (max-width: 1080px) {
   .ButtonFirstGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     gap: 0.5rem 1rem;
     margin-top: 1rem;
@@ -103,12 +103,10 @@
     height: auto;
     width: 97%;
   }
-  .Rightsection70 {
+  .Rightsection {
     width: 97%;
-  }
-  .ExperienceParent {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 2rem;
   }
@@ -121,22 +119,16 @@
     width: 100%;
     margin: auto;
   }
-  .IndexLeft30 {
+  .IndexLeft {
     width: 90%;
     border: 1px solid black;
   }
-  .Rightsection70 {
-    width: 90%;
-  }
-  .ExperienceParent {
+  .Rightsection {
+    width: 97%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 3rem;
     row-gap: 2rem;
-  }
-
-  .Navbardiv {
-    font-size: 10px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 319px) {
@@ -146,21 +138,22 @@
     width: 100%;
     margin: auto;
   }
-  .IndexLeft30 {
+  .IndexLeft {
     width: 90%;
     border: 1px solid black;
   }
-  .Rightsection70 {
-    width: 90%;
-  }
-  .ExperienceParent {
+  .Rightsection {
+    width: 97%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 3rem;
     row-gap: 2rem;
   }
-
-  .Navbardiv a {
-    font-size: 12px;
+  .ButtonFirstGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
   }
 }

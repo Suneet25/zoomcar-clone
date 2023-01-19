@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import cars from "../Styles/CarsPage.module.css";
+import cars from "../../Styles/CarsPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineStar } from "react-icons/ai";
 import { FaCarSide } from "react-icons/fa";
@@ -9,63 +9,107 @@ import { AiFillStar } from "react-icons/ai";
 import { GiGearStickPattern } from "react-icons/gi";
 import { BiRupee } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
-import { getCarData, getCarDataASC } from "../Redux/CarsData/carsData.action";
-import axios from "axios";
+import { getCarsData } from "../../Redux/CarsData/carsData.action";
 
 const CarsPage = () => {
   const dispatch = useDispatch();
-  const [CarsAPIData, setCarsAPIData] = useState([]);
-  const { loading, error, data } = useSelector((state) => state.cars);
-  const navigate = useNavigate();
-
-  let descdata;
-  const fetchDesc = async () => {
-    descdata = await axios.get(
-      `http://localhost:8080/cars?_sort=price&_order=desc`
-    );
-  };
-
-  let maindata;
-  const fetchnormal = async () => {
-    maindata = await axios.get(`http://localhost:8080/cars`);
-    return maindata
-  };
-
+  const [CarsData, setCarsData] = useState([]);
+  const { data } = useSelector((store) => store.CarsReducer);
   /* So basically here i'm getting data form store and setting into setCarsAPIData(data)
     and passing CarsAPIData when it change useEffect re-rendor and it work until data length...
-  */
+    */
 
-  //   const handleCarTypes = (e) => {
-  //     const datatoset = data.filter((ele) => ele.type == e.target.value);
-  //     setCarsAPIData(datatoset);
-  //   };
 
-  //   const HandleLowtoHigh = (e) => {
-  //     const datatoset = data.filter((ele) => ele.type == e.target.value);
-  //     setCarsAPIData(datatoset);
-  //   };
+  const handleReset = () => {
+    setCarsData(data);
+  };
 
-  //   useEffect(() => {
-  //     setCarsAPIData(data);
-  //     dispatch(getCarData());
-  //   }, [data.length, CarsAPIData]);
+  const handleLowtoHigh = () => {
+    const sortfunc = data.sort((a, b) => {
+      return a.price - b.price;
+    });
+    setCarsData(sortfunc);
+    console.log(" low to high", sortfunc);
+  };
 
-  console.log("datamain Cars Page", CarsAPIData);
+  const handleHightoLow = () => {
+    const sortfuncHigh = data.sort((a, b) => {
+      return b.price - a.price;
+    });
+    setCarsData(sortfuncHigh);
+    // console.log(" sort high to low", sortfuncHigh);
+  };
 
-  //   useEffect(() => {
-  //     //   dispatch(getCarDataASC());
+  const handleBestRating = () => {
+    const BestRating = data.sort((a, b) => {
+      return b.rating - a.rating;
+    });
+    setCarsData(BestRating);
+    // console.log(" sort high to low", BestRating);
+  };
 
-  //     dispatch(getCarData());
-  //   }, [data.length]);
+  // const handleCarTypes = (e) => {
+  //   const CarTypesvalue = data.filter((el, i) => {
+  //     if (el.type === e.target.value) {
+  //       return data;
+  //     }
+  //   });
+  //   setCarsData(CarTypesvalue);
+  //   console.log("Filter data", CarTypesvalue);
+  // };
+
+  const handleCarTypesSUV = () => {
+    const CarTypesvalue = data.filter((el, i) => {
+      if (el.type === "SUV") {
+        return data;
+      }
+    });
+    setCarsData(CarTypesvalue);
+    // console.log("Filter data", CarTypesvalue);
+  };
+  const handleCarTypesSedan = () => {
+    const CarTypesvalue = data.filter((el, i) => {
+      if (el.type === "Sedan") {
+        return data;
+      }
+    });
+    setCarsData(CarTypesvalue);
+    // console.log("Filter data", CarTypesvalue);
+  };
+  const handleCarTypesHatchBack = () => {
+    const CarTypesvalue = data.filter((el, i) => {
+      if (el.type === "Hatchback") {
+        return data;
+      }
+    });
+    setCarsData(CarTypesvalue);
+    // console.log("Filter data", CarTypesvalue);
+  };
+
+  // const BestRating = data.filter((ele) => ele.rating == e.target.value);
+  // setMet(BestRating);
+
+  const abc = () => {
+    // let newdata;
+    // const typeFilter = (type) => {
+    //   newdata = data.filter((el, i) => {
+    //     if (el.type === type) {
+    //       return newdata;
+    //     }
+    //   });
+  };
 
   useEffect(() => {
-    fetchDesc();
-    setCarsAPIData(maindata);
-  }, []);
-  //   if (loading) return <div>Loading...</div>;
-  //   else if (error) return <div>Error...</div>;
+    dispatch(getCarsData());
+  }, [data.length, dispatch, CarsData]);
+
+  useEffect(() => {
+    setCarsData(data);
+  }, [setCarsData, data.length]);
+
   /* 
-  className={cars. }
+
+    className={cars. }
   */
   //  else
   return (
@@ -75,7 +119,7 @@ const CarsPage = () => {
           <div className={cars.SortingTag}>
             <h1 style={{ fontWeight: "600" }}>Sort & Filters</h1>
             <p
-              onClick={() => {}}
+              onClick={handleReset}
               style={{ fontWeight: "700", color: "#10A310", cursor: "pointer" }}
             >
               RESET
@@ -84,15 +128,15 @@ const CarsPage = () => {
           <br />
           <p>Sort By</p>
           <div className={cars.ButtonFirstGrid}>
-            <div onClick={() => setCarsAPIData(descdata)}>
+            <div onClick={handleLowtoHigh}>
               <BiRupee className={cars.icons} />
               <span>Low to High</span>
             </div>
-            <div>
+            <div onClick={handleHightoLow}>
               <BiRupee className={cars.icons} />
               <span>High to Low</span>
             </div>
-            <div>
+            <div onClick={(e) => handleBestRating(e)}>
               <AiOutlineStar className={cars.icons} />
               <span>Best Rating</span>
             </div>
@@ -101,15 +145,15 @@ const CarsPage = () => {
           <br />
           <p>Car type</p>
           <div className={cars.ButtonFirstGrid}>
-            <div>
+            <div onClick={(e) => handleCarTypesSUV("SUV")}>
               <FaCarSide className={cars.icons} />
               <span>SUV</span>
             </div>
-            <div>
+            <div onClick={() => handleCarTypesSedan("Sedan")}>
               <FaCarSide className={cars.icons} />
               <span>Sedan</span>
             </div>
-            <div>
+            <div onClick={() => handleCarTypesHatchBack("Hatchback")}>
               <FaCarSide className={cars.icons} />
               <span>Hatchback</span>
             </div>
@@ -156,7 +200,7 @@ const CarsPage = () => {
         </div>
 
         <div className={cars.Rightsection}>
-          {CarsAPIData.map((items, i) => (
+          {CarsData.map((items, i) => (
             <div key={i} className={cars.mappingContainer}>
               <div>
                 <img
@@ -182,8 +226,8 @@ const CarsPage = () => {
                 </div>
                 <div className={cars.RightsectionSpans}>
                   <span>{items.fueltype}</span>
-                  <span>{items.fueltype}</span>
-                  <span>{items.fueltype}</span>
+                  <span>{items.seats}</span>
+                  <span>{items.type}</span>
                 </div>
                 <h1 className={cars.RightsectionH1}>₹ {items.price}</h1>
               </div>
