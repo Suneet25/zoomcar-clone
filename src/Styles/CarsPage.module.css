@@ -1,0 +1,185 @@
+.IndexMain {
+  margin-top: 2rem;
+  display: flex;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  top: 0;
+}
+.IndexLeft {
+  height: auto;
+  width: 33%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: -0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.SortingTag {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ButtonFirstGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.FirstFilters {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.ButtonFirstGrid button {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.ButtonFirstGrid button:hover {
+  background-color: rgb(237, 237, 237);
+  transition: 0.5s;
+}
+.ButtonFirstGrid div:hover {
+  background-color: rgb(237, 237, 237);
+  transition: 0.5s;
+}
+
+.Rightsection {
+  width: 63%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: auto;
+  margin: auto;
+  padding: 2rem 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.mappingContainer {
+  cursor: pointer;
+  padding: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.Rightsection span {
+  margin-right: 0.5rem;
+  font-size: 13px;
+}
+
+.Rightsection div h1 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.RatingDiv {
+  background-color: aliceblue;
+  width: 20px;
+  height: 1rem;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.mappingImg {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+.mappingImg:hover {
+  transform: scale(1.06);
+  transition: 0.8s;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+  .ButtonFirstGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .IndexMain {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  .IndexLeft {
+    height: auto;
+    width: 97%;
+  }
+  .Rightsection {
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .IndexMain {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  .IndexLeft {
+    width: 90%;
+    border: 1px solid black;
+  }
+  .Rightsection {
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+  }
+  .ButtonFirstGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 319px) {
+  .IndexMain {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  .IndexLeft {
+    width: 90%;
+    border: 1px solid black;
+  }
+  .Rightsection {
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+  }
+  .ButtonFirstGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+}

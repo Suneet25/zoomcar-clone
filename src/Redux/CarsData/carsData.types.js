@@ -1,5 +1,7 @@
-export const CARSDATA_GET_LOADING = "carsdata/get/loading";
-export const CARSDATA_GET_SUCCESS = "carsdata/get/success";
-export const CARSDATA_GET_ERROR = "carsdata/get/error";
+export const CARS_LOADING = "CARS_LOADING";
+export const CARS_SUCCESS = "CARS_SUCCESS";
+export const CARS_FAILURE = "CARS_FAILURE";
 
-export const CARSDATA_RESET = "carsdata/reset/";
+export const SINGLE_CARS_LOADING = "SINGLE_CARS_LOADING";
+export const SINGLE_CARS_SUCCESS = "SINGLE_CARS_SUCCESS";
+export const SINGLE_CARS_FAILURE = "SINGLE_CARS_FAILURE";

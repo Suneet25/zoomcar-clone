@@ -1,7 +1,10 @@
 import {
-  CARSDATA_GET_ERROR,
-  CARSDATA_GET_LOADING,
-  CARSDATA_GET_SUCCESS,
+  CARS_FAILURE,
+  CARS_LOADING,
+  CARS_SUCCESS,
+  SINGLE_CARS_FAILURE,
+  SINGLE_CARS_LOADING,
+  SINGLE_CARS_SUCCESS,
 } from "./carsData.types";
 
 const initialState = {
@@ -12,20 +15,22 @@ const initialState = {
 
 export const CarsPageReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case CARSDATA_GET_LOADING: {
+    case CARS_LOADING: {
       return {
         ...state,
         loading: true,
+        error: false,
       };
     }
-    case CARSDATA_GET_SUCCESS: {
+    case CARS_SUCCESS: {
       return {
         ...state,
-        loading: false,
         data: payload,
+        loading: false,
+        error: false,
       };
     }
-    case CARSDATA_GET_ERROR: {
+    case CARS_FAILURE: {
       return {
         ...state,
         loading: false,
@@ -33,12 +38,28 @@ export const CarsPageReducer = (state = initialState, { type, payload }) => {
       };
     }
 
-    /* in Reset case we are returning InitialState */
-    // case FEEDS_RESET: {
-    //   return {
-    //     ...initialState,
-    //   };
-    // }
+    case SINGLE_CARS_LOADING: {
+      return {
+        ...state,
+        loading: true,
+        error: false,
+      };
+    }
+    case SINGLE_CARS_SUCCESS: {
+      return {
+        ...state,
+        data: payload,
+        loading: false,
+        error: false,
+      };
+    }
+    case SINGLE_CARS_FAILURE: {
+      return {
+        ...state,
+        loading: false,
+        error: true,
+      };
+    }
     default: {
       return state;
     }
