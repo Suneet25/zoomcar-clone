@@ -1,0 +1,77 @@
+.ExploreMain{
+    display: grid;
+}
+
+.ExploreDiv {
+  display: grid;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  /* column-gap: 0.5rem; */
+}
+
+.ExploreDiv2 {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 1rem;
+  /* column-gap: 0.5rem; */
+}
+
+.ExploreDivImg {
+  width: 650px;
+  height: 400px;
+}
+
+.ExploreDivImg2 {
+  width: 400px;
+  height: 550px;
+}
+
+
+.Exploreh1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1110px) {
+    .ExploreDivImg {
+        width: 650px;
+        height: 400px;
+      }
+      .ExploreDivImg2 {
+        width: 400px;
+        height: 550px;
+      }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .ExploreDivImg {
+        width: 200px;
+        height: 200px;
+      }
+      .ExploreDivImg2 {
+        width: 400px;
+        height: 550px;
+      }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .ExploreDivImg {
+        width: 450px;
+        height: 300px;
+      }
+      .ExploreDivImg2 {
+        width: 400px;
+        height: 550px;
+      }
+}
+
+@media only screen and (max-width: 320px){
+    .ExploreDivImg {
+        width: 300px;
+        height: 200px;
+      }
+      .ExploreDivImg2 {
+        width: 400px;
+        height: 550px;
+      }
+    }
