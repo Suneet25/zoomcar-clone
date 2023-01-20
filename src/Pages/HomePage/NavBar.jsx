@@ -29,16 +29,24 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
+import { AuthContext } from "../../Components/AuthContext";
+import { useContext } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import "../../Styles/Navbar.css";
+
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const { name, isAuth, logoutUser } = useContext(AuthContext);
+
   // const isAuth = useSelector((state) => state.AuthReducer.isAuth);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  let isAuth = true;
-  const handleLogout = () => {};
+  // let isAuth = true;
+  // const handleLogout = () => {};
 
-  const handleLogin = () => {};
+  // const handleLogin = () => {};
 
   //   useEffect(() => {
   //
@@ -196,7 +204,7 @@ const Navbar = () => {
                       <Text
                         fontSize="16px"
                         cursor="pointer"
-                        onClick={handleLogout}
+                        // onClick={handleLogout}
                       >
                         Logout
                       </Text>
@@ -215,31 +223,34 @@ const Navbar = () => {
               />
             </Box>
           </Flex>
+
           <Flex
             minWidth={"350px"}
             alignItems={"center"}
             justifyContent={"space-between"}
             direction={"row"}
             className="navBarRightSide"
+            // bgColor={"blue"}
           >
             <Text fontWeight={"600"} fontSize="18px">
               <Link to="/host">
                 <Button
-                  className="Host"
+                  className="navbar_hostButton"
                   style={{
                     color: "black",
                     backgroundColor: "white",
                     borderRadius: "30px",
+                    marginRight: "80px",
                   }}
                 >
                   Become a Host
                 </Button>
               </Link>
             </Text>
-            <Text fontWeight={"600"} fontSize="18px">
+            <Text fontWeight={"600"} fontSize="18px" marginRight="80px">
               <Link to="/zms">ZMS</Link>
             </Text>
-            <Menu>
+            {/* <Menu>
               <MenuButton
                 as={Button}
                 rounded={"full"}
@@ -260,12 +271,37 @@ const Navbar = () => {
                   className="menuLogoutBtn"
                   color="white"
                   backgroundColor="black"
-                  onClick={handleLogout}
+                  // onClick={handleLogout}
                 >
                   Logout
                 </MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
+
+            <Flex>
+              <Button
+                bg="black"
+                color="white"
+                fontSize={"16px"}
+                fontWeight="bold"
+                rounded="none"
+                marginRight="80px"
+                _hover={{ bgColor: "white", color: "black" }}
+              >
+                {name}
+              </Button>{" "}
+              <RouterLink to="/">
+                <Button
+                  colorScheme="#2B6CB0"
+                  variant="outline"
+                  _hover={{ bgColor: "white", color: "black" }}
+                  mr="20px"
+                  onClick={logoutUser}
+                >
+                  <b>Logout</b>
+                </Button>
+              </RouterLink>
+            </Flex>
           </Flex>
         </Flex>
       ) : (
@@ -347,7 +383,7 @@ const Navbar = () => {
                         <Text
                           fontSize="16px"
                           cursor="pointer"
-                          onClick={handleLogin}
+                          // onClick={handleLogin}
                         >
                           Login
                         </Text>
@@ -375,7 +411,7 @@ const Navbar = () => {
               <Text fontWeight={"600"} fontSize="auto">
                 <Link to="/host">
                   <Button
-                    className="Host"
+                    className="navbar_hostButton"
                     style={{
                       color: "black",
                       backgroundColor: "white",
@@ -389,7 +425,7 @@ const Navbar = () => {
               <Text fontWeight={"600"} fontSize="auto">
                 <Link to="/zms">ZMS</Link>
               </Text>
-              <Menu className="userMenuNavbar">
+              {/* <Menu className="userMenuNavbar">
                 <MenuButton
                   as={Button}
                   rounded={"full"}
@@ -409,7 +445,25 @@ const Navbar = () => {
                 <MenuList alignItems={"center"} backgroundColor="black">
                   <MenuItem onClick={handleLogin}>Login</MenuItem>
                 </MenuList>
-              </Menu>
+              </Menu> */}
+              <RouterLink to="/signup">
+                <Button
+                  variant="outline"
+                  _hover={{ bgColor: "white", color: "black" }}
+                >
+                  Sign up
+                </Button>
+              </RouterLink>
+
+              <RouterLink to="/login">
+                <Button
+                  marginRight={"40px"}
+                  variant="outline"
+                  _hover={{ bgColor: "white", color: "black" }}
+                >
+                  Log in
+                </Button>
+              </RouterLink>
             </Flex>
           </Flex>
         </Box>
