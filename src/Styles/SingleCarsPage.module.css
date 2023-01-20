@@ -1,0 +1,104 @@
+.parent {
+  margin-top: 2rem;
+  width: 90%;
+  height: 100rem;
+  border: 1px solid red;
+  margin: auto;
+  display: flex;
+}
+
+.LeftSection {
+  width: 60%;
+  height: 100rem;
+  margin: auto;
+}
+
+.LeftSectionImgDiv {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.LeftImage {
+  width: 80%;
+  height: 15rem;
+  margin: auto;
+  border-radius: 7px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.LeftSectionImgDivParent {
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: auto;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.LeftSectionImgDivSecond {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1rem 0.5rem;
+}
+
+.LeftSectionImgDivh1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.LeftSectionSpans span {
+  margin-right: 0.5rem;
+  font-size: 13px;
+}
+
+.LeftRatingSection {
+  padding: 1rem 0.5rem;
+}
+
+.LeftSectionIFrameSection {
+  background-color: #fff;
+  margin-top: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.LeftSectionPolicy {
+  width: 50%;
+  height: auto;
+  padding: 0rem 1rem;
+}
+
+.LeftSectionPolicy div {
+  margin-bottom: 0.8rem;
+}
+
+.LeftSectionPolicy h1 {
+  font-weight: 600;
+}
+
+.LeftSectionPolicy p {
+  font-size: 13px;
+}
+
+.RightSection {
+  width: 28%;
+  height: 100rem;
+  border: 1px solid green;
+  margin: auto;
+  background-color: #fff;
+}

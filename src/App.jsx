@@ -6,14 +6,17 @@ import "./App.css";
 
 // import Wallet from "./Pages/Payment/Wallet";
 
+import Home from "./Pages/HomePage/Home";
+
+// import AllRoutes from "./Components/AllRoutes";
+
+
 function App() {
-  return <div className="App">
-    {/* <Payment /> */}
-    {/* <Wallet/>
-    <Banking/>
-    <Credit/> */}
-    {/* <Active/> */}
-  </div>;
+  return (
+    <div className="App">
+      {/* <Home /> */}
+    </div>
+  );
 }
 
 export default App;
