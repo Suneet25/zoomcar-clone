@@ -2,7 +2,6 @@
   margin-top: 2rem;
   width: 90%;
   height: auto;
-  /* border: 1px solid red; */
   margin: auto;
   display: flex;
 }
@@ -80,7 +79,7 @@
 .LeftSectionPolicy {
   width: 50%;
   height: auto;
-  padding: 0rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .LeftSectionPolicy div {
@@ -248,4 +247,78 @@
   height: 7px;
   border-radius: 50%;
   background: white;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+  }
+  .LeftSectionIFrameSection {
+    display: block;
+  }
+  .LeftSectionPolicy {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+  }
+  .LeftSectionIFrameSection {
+    display: block;
+  }
+
+  .LeftSectionIFrameSection iframe{
+    width: 100%;
+  }
+  .LeftSectionPolicy {
+    margin-top: 1rem;
+
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 319px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+  }
+  .LeftSectionIFrameSection {
+    display: block;
+    width: 90%;
+  }
+  .LeftSectionIFrameSection iframe{
+    width: 100%;
+  }
+  .LeftSectionPolicy {
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+  }
 }
