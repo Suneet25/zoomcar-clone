@@ -1,6 +1,7 @@
 import "./App.css";
+import AllRoutes from "./Components/AllRoutes";
 
-import Home from "./Pages/HomePage/Home";
+// import Home from "./Pages/HomePage/Home";
 
 // import AllRoutes from "./Components/AllRoutes";
 
@@ -8,7 +9,8 @@ import Home from "./Pages/HomePage/Home";
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
+      <AllRoutes/>
     </div>
   );
 }

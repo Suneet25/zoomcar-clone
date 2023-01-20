@@ -1,22 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import single from "../../Styles/SingleCarsPage.module.css";
 import { getSingleCarsData } from "../../Redux/CarsData/carsData.action";
 
 const SingleCarsPage = () => {
-  const dispatch = useDispatch();
-  const [SinglePageData, setSinglePageData] = useState({});
   const { data } = useSelector((store) => store.CarsReducer);
+  const [value, setvalue] = useState(0);
+  const [Carprice, setCarprice] = useState(data.price);
+  const [update, setupdate] = useState(0);
+  const dispatch = useDispatch();
+  const Basic = 375;
+  // const [SinglePageData, setSinglePageData] = useState({});
 
   //   <FaArrowLeft cursor="pointer" onClick={() => navigate("/")} />
   const { id } = useParams();
-  console.log("id ", id);
-  console.log("data ", data);
+  // console.log("id ", id);
+
+  const handleValueChange = (e) => {
+    // setvalue(Number(e.target.value));
+    setCarprice(Number(data.price));
+    setupdate(Basic + data.price);
+  };
+
+  console.log("Input value on top ", value);
+  // console.log("Basic ", Basic);
+  // console.log(typeof value);
+  console.log("Carprice", Carprice);
+  // console.log("data.price", data.price);
+  // console.log(typeof Carprice);
+  console.log("update value after", update);
+  // console.log(typeof update);
+  // console.log("SinglePageData", SinglePageData);
+
+  // console.log("data ", data);
+
+  // useEffect(() => {
+  // }, [value, Carprice]);
 
   useEffect(() => {
     dispatch(getSingleCarsData(id));
-    setSinglePageData(data);
+    // setSinglePageData(data);
   }, [id]);
   return (
     <>
@@ -35,7 +59,9 @@ const SingleCarsPage = () => {
             <div className={single.LeftSectionImgDivParent}>
               <div className={single.LeftSectionImgDivSecond}>
                 <div>
-                  <h1 className={single.LeftSectionImgDivh1}>{data.title}</h1>
+                  <h1 className={single.LeftSectionImgDivh1}>
+                    {data.title} {`(${data.fueltype})`}
+                  </h1>
                   <div className={single.LeftSectionSpans}>
                     <span>{data.fueltype} </span>
                     <span>{data.seats}</span>
@@ -75,21 +101,106 @@ const SingleCarsPage = () => {
                 <div>
                   <h1>Cancellation Policy</h1>
                   <p>
-                  Hassle free cancellations and refunds at nominal charges
+                    Hassle free cancellations and refunds at nominal charges
                   </p>
                 </div>
                 <div>
                   <h1>Agreement Policy</h1>
                   <p>
-                  I hereby agree to the terms and conditions of the Lease Agreement with Host
+                    I hereby agree to the terms and conditions of the Lease
+                    Agreement with Host
                   </p>
-                  <input type="checkbox" />
+                  <div>
+                    <label class={single.container}>
+                      <input type="checkbox" />
+                      <span class={single.checkmark}></span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className={single.RightSection}></div>
+          <div className={single.RightSection}>
+            <div>
+              <h1>Other Charges</h1>
+              <p>Convenience Fee (₹199) ₹99</p>
+            </div>
+            <div className={single.RightSectionProtection}>
+              <h1>TRIP PROTECTION PACKAGE</h1>
+              <div className={single.RightSectionProtectionDiv}>
+                <div>
+                  <b>1. Basic (₹375)</b>
+                  <div>
+                    <label class={single.container}>
+                      <input
+                        value={375}
+                        onClick={handleValueChange}
+                        type="checkbox"
+                      />
+                      <span class={single.checkmark}></span>
+                    </label>
+                  </div>
+                </div>
+                <p>You pay up to INR 3499 in case of any damage</p>
+              </div>
+              <div className={single.RightSectionProtectionDiv}>
+                <div>
+                  <b>2. Standard (₹436)</b>
+                  <div>
+                    <label class={single.container}>
+                      <input type="checkbox" />
+                      <span class={single.checkmark}></span>
+                    </label>
+                  </div>
+                </div>
+                <p>You pay up to INR 999 in case of any damage</p>
+                <h3
+                  style={{
+                    fontWeight: "600",
+                    color: "#10a310",
+                    fontSize: "14px",
+                  }}
+                >
+                  RECOMMENDED FOR YOU
+                </h3>
+              </div>
+              <div className={single.RightSectionProtectionDiv}>
+                <div>
+                  <b>3. Peace of Mind (₹465)</b>
+                  <div>
+                    <label class={single.container}>
+                      <input type="checkbox" />
+                      <span class={single.checkmark}></span>
+                    </label>
+                  </div>
+                </div>
+                <p>You pay up to INR 99 in case of any damage</p>
+              </div>
+            </div>
+            <div className={single.RightSectionProtectionWorks}>
+              <h1>How Trip Protection Works?</h1>
+              <p>
+                • Zoomcar will assist in damage repair costs up to the amount as
+                per the maximum deductible limit. • Does not cover any
+                third-party liability or any intentional damage or damage that
+                occurred due to intoxication or high speed, rash, or negligent
+                driving. • Please read Zoomcar policy to know more.
+              </p>
+            </div>
+            <div className={single.RightSectionPriceandCoupon}>
+              {/* <h1>₹ {data.price}</h1> */}
+              <h1>₹ {update > data.price ? update : data.price}</h1>
+              <p>🏷️Apply Coupon</p>
+            </div>
+            <Link to="/payment">
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <button className={single.RightSectionPayButton}>
+                  PROCCED TO PAY ₹ {update > data.price ? update : data.price}
+                </button>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </>
