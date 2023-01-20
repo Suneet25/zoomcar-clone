@@ -14,6 +14,8 @@ import Wallet from "./Wallet";
 import Banking from "./Banking";
 import Credit from "./Credit";
 
+
+
 const Payment = () => {
   // const [pageData, setpageData] = useState(<Active />)
   const [pageTrue, setpageTrue] = useState(false);
@@ -75,7 +77,7 @@ const Payment = () => {
                   />
 
                   <Box>
-                    <Heading size="sm">Credit / Debit / ATM Card</Heading>
+                    <Heading size="sm">Credit/ Debit/ ATM Card</Heading>
                     {/* <Text> major cards are supported</Text> */}
                   </Box>
                 </Flex>
@@ -151,7 +153,8 @@ const Payment = () => {
                 })} */}
         {/* <Wallet/>  */}
         {/* <Banking/> */}
-        {/* <Credit/> */}
+        <Credit/>
+        {/* <Active/> */}
 
         {/* end here */}
       </div>

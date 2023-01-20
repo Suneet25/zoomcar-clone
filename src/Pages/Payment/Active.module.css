@@ -1,7 +1,7 @@
 .activeDiv{
     margin: auto;
     width: 500px;
-    border: 1px solid black;
+    border: 5px solid black;
     
 }
 
@@ -12,7 +12,7 @@
 
 
 .activeDiv>div:nth-child(2){
-    border: 1px solid green;
+    border: 5px solid green;
     display: flex;
     margin-top: 20px;
 }
@@ -27,9 +27,11 @@
 }
 
 .h1tag{
-    /* background-color: lightgrey; */
+    background-color: lightgrey;
     padding: 10px;
     text-align: center;
+    font-size: large;
+    font-weight: 700;
 }
 
 p{

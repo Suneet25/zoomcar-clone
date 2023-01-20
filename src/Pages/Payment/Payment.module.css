@@ -1,7 +1,7 @@
 .payDiv{
-    height: 600px;
-    width: 98%;
-    /* border: 1px solid red; */
+ 
+    width: 80%;
+    border: 1px solid red;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -9,20 +9,23 @@
 
  .payDiv>div:nth-child(1){
     width: 70%;
-    height: 500px;
+    /* height: 500px; */
     border: 1px solid green;
     display: flex;
 }
 
 .payDiv>div:nth-child(1)>div:nth-child(1){
-    width: 35%;
-    border: 1px solid black;
+    width: 45%;
+    border: 5px solid black;
+    /* height: auto; */
 }
 
 
 .payDiv>div:nth-child(1)>div:nth-child(2){
-    width: 65%;
+    width: 85%;
     border: 5px solid pink;
+    margin-top: -3px;
+    /* height: auto; */
 }
 
 .payDiv>div:nth-child(1)>div:nth-child(2)>div:nth-child(1){
@@ -37,7 +40,7 @@
 .payDiv>div:nth-child(1)>div:nth-child(2)>div:nth-child(2){
     width: 100%;
     border: 1px solid green;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: flex;
 }
 
