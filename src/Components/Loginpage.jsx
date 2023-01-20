@@ -4,53 +4,55 @@ import {
   FormControl,
   FormLabel,
   Input,
-  InputGroup,
-  HStack,
-  InputRightElement,
+  Checkbox,
   Stack,
+  Link,
   Button,
   Heading,
   Text,
-  useColorModeValue,
-  Link,
   Image,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+import { AuthContext } from "./AuthContext";
 import Logo from "../Images/SignUp_Login_logo.png";
 
-export default function SignupCard() {
-  const [Password, setPassword] = useState("");
-  const [name, setname] = useState("");
+export default function Loginpage() {
   const [email, setemail] = useState("");
+  const [Password, setPassword] = useState("");
   const [load, setload] = useState(false);
   const navigate = useNavigate();
+  const { loginUser, logoutUser } = useContext(AuthContext);
 
-  const postdata = async () => {
+  const login = async () => {
     setload(true);
+
     try {
-      let res = await fetch(`https://mockserver-fhbg.onrender.com/users`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          Password,
-        }),
-      });
+      let res = await fetch(`https://mockserver-fhbg.onrender.com/users`);
       let data = await res.json();
       console.log(data);
+      let Auth = false;
+      for (let i in data) {
+        if (data[i].email === email && data[i].Password === Password) {
+          Auth = true;
+          loginUser(data[i].name);
+          console.log(data[i].name);
+          break;
+        }
+      }
       setload(false);
-      alert("Signup Successfull!");
-      navigate("/login");
+      if (Auth == false) {
+        alert("Please enter right email or password!");
+      } else {
+        alert("Login Successfull!");
+        navigate("/dashboard");
+      }
+      console.log(Auth);
     } catch (error) {
       setload(false);
       console.log(error);
     }
-
-    setname("");
     setemail("");
     setPassword("");
   };
@@ -89,28 +91,14 @@ export default function SignupCard() {
         //   width={"500px"}
         //   height={"auto"}
         >
-          <Stack spacing={4} mt={"-10px"}>
-            <Box>
-              <FormControl id="firstName" isRequired>
-                <Flex>
-                  <FormLabel color={"green"} fontSize={"md"}>
-                    Enter Name
-                  </FormLabel>
-                  <Input
-                    width={"370px"}
-                    value={name}
-                    onChange={(e) => setname(e.target.value)}
-                    type="text"
-                  />
-                </Flex>
-              </FormControl>
-            </Box>
-
-            <FormControl id="email" isRequired>
+          <Stack spacing={4}>
+            <FormControl id="email">
               <Flex>
-                <FormLabel color={"green"}>Enter Email ID</FormLabel>
+                <FormLabel color={"green"} fontSize={"md"}>
+                  Enter Email ID
+                </FormLabel>
                 <Input
-                  width={"355px"}
+                  width={"383px"}
                   value={email}
                   onChange={(e) => setemail(e.target.value)}
                   type="email"
@@ -118,27 +106,40 @@ export default function SignupCard() {
               </Flex>
             </FormControl>
 
-            <FormControl id="password" isRequired>
+            <FormControl id="password">
               <Flex>
-                <FormLabel color={"green"}>Enter Password</FormLabel>
+                <FormLabel color={"green"} fontSize={"md"}>
+                  {" "}
+                  Enter Password
+                </FormLabel>
                 <Input
-                  width={"340px"}
+                  width={"370px"}
                   value={Password}
                   onChange={(e) => setPassword(e.target.value)}
                   type="password"
                 />
               </Flex>
             </FormControl>
-
-            <Stack spacing={10} pt={2}>
+            <Stack spacing={10}>
+              <Stack
+                direction={{ base: "column", sm: "row" }}
+                align={"start"}
+                justify={"space-between"}
+              >
+                <Checkbox color={"green"} fontSize={"md"}>
+                  Remember me
+                </Checkbox>
+                <Link color={"green"} fontSize={"sm"}>
+                  Forgot password?
+                </Link>
+              </Stack>
               {load ? (
-                <Button isLoading colorScheme="green" variant="solid">
+                <Button isLoading colorScheme="teal" variant="solid">
                   Email
                 </Button>
               ) : (
                 <Button
-                  onClick={postdata}
-                  loadingText="Submitting"
+                  onClick={login}
                   size="md"
                   bg={"green.600"}
                   color={"white"}
@@ -146,17 +147,9 @@ export default function SignupCard() {
                     bg: "green.700",
                   }}
                 >
-                  Sign up
+                  Log in
                 </Button>
               )}
-            </Stack>
-            <Stack>
-              <Text align={"center"} fontSize={"sm"}>
-                Already a user?{" "}
-                <Link color={"green"} to="/login">
-                  Login
-                </Link>
-              </Text>
             </Stack>
           </Stack>
         </Box>
