@@ -1,0 +1,40 @@
+.activeDiv {
+  margin: auto;
+  width: 500px;
+  /* border: 1px solid black; */
+}
+
+.activeDiv > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeDiv > div:nth-child(2) {
+  /* border: 1px solid green; */
+  display: flex;
+  margin-top: 20px;
+}
+
+.activeDiv > div:nth-child(2) > div:first-child {
+  /* border: 1px solid red; */
+  width: 350px;
+}
+
+.activeDiv > div:nth-child(2) > div:nth-child(2) {
+  /* border: 1px solid yellow; */
+}
+
+.h1tag {
+  /* background-color: lightgrey; */
+  padding: 10px;
+  text-align: center;
+}
+
+p {
+  padding: 5px;
+}
+
+.card:hover {
+  background-color: rgb(194, 194, 194);
+  transition: 0.5s;
+}

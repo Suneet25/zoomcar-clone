@@ -1,15 +1,14 @@
 .parent {
   margin-top: 2rem;
   width: 90%;
-  height: 100rem;
-  border: 1px solid red;
+  height: auto;
   margin: auto;
   display: flex;
 }
 
 .LeftSection {
   width: 60%;
-  height: 100rem;
+  height: auto;
   margin: auto;
 }
 
@@ -80,7 +79,7 @@
 .LeftSectionPolicy {
   width: 50%;
   height: auto;
-  padding: 0rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .LeftSectionPolicy div {
@@ -97,8 +96,258 @@
 
 .RightSection {
   width: 28%;
-  height: 100rem;
-  border: 1px solid green;
-  margin: auto;
+  height: 50rem;
   background-color: #fff;
+  padding: 1rem 0.5rem;
+}
+
+.RightSectionProtection {
+  margin-top: 2rem;
+}
+
+.RightSectionProtection h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.RightSectionProtectionDiv {
+  margin-bottom: 1rem;
+}
+
+.RightSectionProtectionDiv div {
+  display: flex;
+  justify-content: space-between;
+}
+.RightSectionProtectionDiv p {
+  font-size: 12px;
+  color: #656569;
+  width: 70%;
+}
+
+.RightSectionProtectionWorks {
+  width: 100%;
+  margin: auto;
+  background-color: #dcdcdcb7;
+  padding: 1.5rem 1rem 1.5rem 0.8rem;
+  border-radius: 8px;
+}
+
+.RightSectionProtectionWorks p {
+  font-size: 12px;
+}
+
+.RightSectionPriceandCoupon {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.RightSectionPriceandCoupon h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.RightSectionPriceandCoupon p {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.RightSectionPayButton {
+  width: 90%;
+  margin: auto;
+  height: 3rem;
+  background-color: #10a310;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.RightSectionPayButton:hover {
+  transform: scale(1.06);
+  transition: 0.8s;
+  width: 95%;
+  margin: auto;
+  height: 3rem;
+  background-color: #10a310;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+/* Checkbox CSS */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #10a310;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+    height: 55rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+    height: 70rem;
+  }
+  .LeftSectionIFrameSection {
+    display: block;
+  }
+  .LeftSectionPolicy {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+    height: 82rem;
+  }
+  .LeftSectionIFrameSection {
+    display: block;
+  }
+
+  .LeftSectionIFrameSection iframe {
+    width: 100%;
+  }
+  .LeftSectionPolicy {
+    margin-top: 1rem;
+
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+  }
+  .LeftSectionImgDivSecond {
+    display: block;
+  }
+  .LeftSectionImgDivSecond div {
+    margin-bottom: 1rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 319px) {
+  .parent {
+    display: block;
+  }
+
+  .LeftSection {
+    width: 98%;
+    height: 90rem;
+  }
+  .LeftSectionIFrameSection {
+    display: block;
+    width: 90%;
+  }
+  .LeftSectionIFrameSection iframe {
+    width: 100%;
+  }
+  .LeftSectionPolicy {
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+  }
+  .LeftSectionImgDivSecond {
+    display: block;
+  }
+  .LeftSectionImgDivSecond div {
+    margin-bottom: 1rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
+  }
 }
