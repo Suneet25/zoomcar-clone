@@ -1,6 +1,6 @@
 import "./App.css";
 // import Active from "./Pages/Payment/Active";
-import Payment from "./Pages/Payment/Payment";
+// import Payment from "./Pages/Payment/Payment";
 // import Banking from "./Pages/Payment/Banking";
 // import Credit from "./Pages/Payment/Credit";
 
@@ -8,7 +8,7 @@ import Payment from "./Pages/Payment/Payment";
 
 function App() {
   return <div className="App">
-    <Payment />
+    {/* <Payment /> */}
     {/* <Wallet/>
     <Banking/>
     <Credit/> */}
