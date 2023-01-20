@@ -1,48 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import single from "../../Styles/SingleCarsPage.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { getSingleCarsData } from "../../Redux/CarsData/carsData.action";
 import Payment from "../Payment/Payment";
 
 const SingleCarsPage = () => {
   const { data } = useSelector((store) => store.CarsReducer);
-  const [value, setvalue] = useState(0);
   const [Carprice, setCarprice] = useState(data.price);
   const [update, setupdate] = useState(0);
   const dispatch = useDispatch();
   const Basic = 375;
   const Standerd = 436;
   const Advance = 465;
-  // const [SinglePageData, setSinglePageData] = useState({});
 
-  //   <FaArrowLeft cursor="pointer" onClick={() => navigate("/")} />
+  // console.log(data)
+
   const { id } = useParams();
-  // console.log("id ", id);
 
   const handleValueChange = () => {
-    // setvalue(Number(e.target.value));
     setCarprice(Number(data.price));
     setupdate(Basic + data.price);
   };
   const handleValueChange2 = () => {
-    // setvalue(Number(e.target.value));
     setCarprice(Number(data.price));
     setupdate(Standerd + data.price);
   };
   const handleValueChange3 = () => {
-    // setvalue(Number(e.target.value));
     setCarprice(Number(data.price));
     setupdate(Advance + data.price);
   };
 
-  // console.log("Input value on top ", value);
-  // console.log("Carprice", Carprice);
-  // console.log("update value after", update);
+  const handlePassdata = () => {
+    localStorage.setItem("userdata", JSON.stringify(data));
+  };
 
   useEffect(() => {
     dispatch(getSingleCarsData(id));
-    // setSinglePageData(data);
   }, [id]);
   return (
     <>
@@ -193,7 +187,10 @@ const SingleCarsPage = () => {
             </div>
             <Link to="/payment">
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <button className={single.RightSectionPayButton}>
+                <button
+                  onClick={handlePassdata}
+                  className={single.RightSectionPayButton}
+                >
                   PROCCED TO PAY ₹ {update > data.price ? update : data.price}
                 </button>
               </div>
