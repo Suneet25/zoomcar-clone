@@ -8,7 +8,7 @@
 
 .LeftSection {
   width: 60%;
-  height: 100rem;
+  height: auto;
   margin: auto;
 }
 
@@ -96,9 +96,7 @@
 
 .RightSection {
   width: 28%;
-  height: 48rem;
-  /* border: 1px solid green; */
-  /* margin: auto; */
+  height: 50rem;
   background-color: #fff;
   padding: 1rem 0.5rem;
 }
@@ -256,6 +254,11 @@
 
   .LeftSection {
     width: 98%;
+    height: 55rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
   }
 }
 
@@ -266,6 +269,7 @@
 
   .LeftSection {
     width: 98%;
+    height: 70rem;
   }
   .LeftSectionIFrameSection {
     display: block;
@@ -275,8 +279,11 @@
     height: auto;
     padding: 1rem 1rem;
   }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
+  }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .parent {
     display: block;
@@ -284,12 +291,13 @@
 
   .LeftSection {
     width: 98%;
+    height: 82rem;
   }
   .LeftSectionIFrameSection {
     display: block;
   }
 
-  .LeftSectionIFrameSection iframe{
+  .LeftSectionIFrameSection iframe {
     width: 100%;
   }
   .LeftSectionPolicy {
@@ -298,6 +306,16 @@
     width: 100%;
     height: auto;
     padding: 1rem 1rem;
+  }
+  .LeftSectionImgDivSecond {
+    display: block;
+  }
+  .LeftSectionImgDivSecond div {
+    margin-bottom: 1rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 319px) {
@@ -307,12 +325,13 @@
 
   .LeftSection {
     width: 98%;
+    height: 90rem;
   }
   .LeftSectionIFrameSection {
     display: block;
     width: 90%;
   }
-  .LeftSectionIFrameSection iframe{
+  .LeftSectionIFrameSection iframe {
     width: 100%;
   }
   .LeftSectionPolicy {
@@ -320,5 +339,15 @@
     width: 100%;
     height: auto;
     padding: 1rem 1rem;
+  }
+  .LeftSectionImgDivSecond {
+    display: block;
+  }
+  .LeftSectionImgDivSecond div {
+    margin-bottom: 1rem;
+  }
+  .RightSection {
+    width: 98%;
+    height: 42rem;
   }
 }
