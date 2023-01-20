@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 import Logo from "../Images/SignUp_Login_logo.png";
+import "../Styles/Login.css";
 
 export default function Loginpage() {
   const [email, setemail] = useState("");
@@ -46,7 +47,7 @@ export default function Loginpage() {
         alert("Please enter right email or password!");
       } else {
         alert("Login Successfull!");
-        navigate("/dashboard");
+        navigate("");
       }
       console.log(Auth);
     } catch (error) {

@@ -6,6 +6,8 @@ import Poster2 from "./Poster2";
 import Navbar from "./NavBar";
 import Poster3 from "./Poster3";
 import BottomTag from "./BottomTag";
+import SignupCard from "../../Components/Signuppage";
+import Loginpage from "../../Components/Loginpage";
 // import AboutPage from "./AboutPage";
 
 const Home = () => {
@@ -19,6 +21,8 @@ const Home = () => {
       <Poster3 />
       {/* <AboutPage /> */}
       <BottomTag />
+      <SignupCard />
+      <Loginpage />
     </div>
   );
 };
