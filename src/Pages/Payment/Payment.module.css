@@ -1,7 +1,7 @@
 .payDiv{
     height: 600px;
-    width: 1300px;
-    border: 1px solid red;
+    width: 98%;
+    /* border: 1px solid red; */
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@
     border: 5px solid yellow;
 }
 
-h1{
+.tagH1{
     margin: auto;
     text-align: center;
    padding: 5px;

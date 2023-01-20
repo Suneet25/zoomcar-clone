@@ -13,7 +13,7 @@ const Active = () => {
             {/* lock part */}
               <div>
                 <div>
-                    <h1>Select a UPI App</h1>
+                    <h1 className={ACTIVE.h1tag}>Select a UPI App</h1>
                     <p>   Amount:₹{"500"}</p>
                 </div>
                 <div>
