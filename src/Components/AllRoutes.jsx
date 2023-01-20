@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CarsPage from "../Pages/CarsPage/CarsPage";
 import SingleCarsPage from "../Pages/CarsPage/SingleCarsPage";
-import Home from "../Pages/Home";
+import Home from "../Pages/HomePage/Home";
 
 const AllRoutes = () => {
   return (
