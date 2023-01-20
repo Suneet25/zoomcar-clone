@@ -8,10 +8,9 @@ import Navbar from "./Components/Navbar";
 function App() {
   return (
     <div className="App">
-      
-      
+      <Signuppage />
       <AllRoutes />
-     
+      <Loginpage />
     </div>
   );
 }
