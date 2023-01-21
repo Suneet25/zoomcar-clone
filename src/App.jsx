@@ -1,6 +1,6 @@
 import "./App.css";
-import AllRoutes from "./Components/AllRoutes";
-import DateTime from "./Pages/HomePage/DateAndTime";
+// import AllRoutes from "./Components/AllRoutes";
+// import DateTime from "./Pages/HomePage/DateAndTime";
 // import Active from "./Pages/Payment/Active";
 // import Payment from "./Pages/Payment/Payment";
 // import Banking from "./Pages/Payment/Banking";
@@ -8,15 +8,15 @@ import DateTime from "./Pages/HomePage/DateAndTime";
 
 // import Wallet from "./Pages/Payment/Wallet";
 
-import Home from "./Pages/HomePage/Home";
-import Navbar from "./Pages/HomePage/NavBar";
-import PickUp from "./Pages/HomePage/PickUp";
+// import Home from "./Pages/HomePage/Home";
+// import Navbar from "./Pages/HomePage/NavBar";
+// import PickUp from "./Pages/HomePage/PickUp";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <AllRoutes />
+      {/* <Navbar />
+      <AllRoutes /> */}
       {/* <PickUp /> */}
       {/* <DateTime /> */}
     </div>
