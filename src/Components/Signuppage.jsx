@@ -58,7 +58,7 @@ export default function SignupCard() {
       alignItems={"center"}
     >
       <Stack
-        border={"1px solid red"}
+        // border={"1px solid red"}
         spacing={6}
         mx={"auto"}
         // maxW={"450px"}
