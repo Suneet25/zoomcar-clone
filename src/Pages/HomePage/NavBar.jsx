@@ -15,6 +15,7 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
+import navbar from "../../Styles/HomeNavbar.module.css";
 import bumBlebee from "..//..//Assets/bumBlebee.jpg";
 import React, { useEffect, useState } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -25,7 +26,7 @@ import { BiCar } from "react-icons/bi";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 
 import { FaUser, FaRegCopy, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -51,6 +52,10 @@ const Navbar = () => {
   //   useEffect(() => {
   //
   //   }, [ dispatch]);
+
+  // let HostClick = () => {
+  //   <Navigate to="/hostpage" />;
+  // };
 
   return (
     <>
@@ -233,7 +238,7 @@ const Navbar = () => {
             // bgColor={"blue"}
           >
             <Text fontWeight={"600"} fontSize="18px">
-              <Link to="/host">
+              <Link href="/host">
                 <Button
                   className="navbar_hostButton"
                   style={{
@@ -305,7 +310,7 @@ const Navbar = () => {
           </Flex>
         </Flex>
       ) : (
-        <Box bg={"black"} color={"white"} px={4} width="100%">
+        <Box className={navbar.boxW} bg={"black"} color={"white"} px={4}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <Flex gap={"15px"} alignItems="center" direction="row">
               <Box>
@@ -442,7 +447,11 @@ const Navbar = () => {
                     Login/SignUp
                   </Text>
                 </MenuButton>
-                <MenuList alignItems={"center"} backgroundColor="black">
+                <MenuList
+                  alignItems={"center"}
+                  backgroundColor="white"
+                  color="black"
+                >
                   <MenuItem onClick={handleLogin}>Login</MenuItem>
                 </MenuList>
               </Menu> */}

@@ -1,0 +1,32 @@
+.boxW
+{
+    width:100%
+}
+
+
+
+@media only screen and (min-width: 700px) and (max-width: 1110px) {
+    .boxW
+{
+    width:100%
+}
+}
+@media only screen and (min-width: 481px) and (max-width: 700px) {
+    .boxW
+    {
+        width:100%
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .boxW
+    {
+        width:100%
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .boxW
+{
+    width:600px
+}
+    }
