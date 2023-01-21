@@ -33,6 +33,44 @@
   margin-top: 0.3rem;
 }
 
+
+/* poster1 */
+
+/* .maincontainer{
+   border: 3px solid blue
+} */
+
+.childcontainer
+{
+   position: relative;
+}
+.topcontent{
+
+    position: absolute;
+    top: 5%;
+    left: 13%;
+
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 20px;
+    right:12%
+}
+
+.topheading{
+  
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.29;
+    text-align: center;
+  
+}
+
+
+
+
+
+
+
 @media only screen and (min-width: 769px) and (max-width: 1110px) {
   .ExploreDivImg {
     width: 650px;
@@ -42,6 +80,25 @@
     width: 400px;
     height: 550px;
   }
+  .topcontent{
+
+    position: absolute;
+    top: 5%;
+    left: 17%;
+
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 20px;
+    right:10%
+}
+.topheading{
+  
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.29;
+  text-align: center;
+
+}
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .ExploreDivImg {
@@ -52,6 +109,25 @@
     width: 400px;
     height: 550px;
   }
+  .topcontent{
+
+    position: absolute;
+    top: 5%;
+    left: 17%;
+
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 20px;
+    right:10%
+}
+.topheading{
+  
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.29;
+  text-align: center;
+
+}
 }
 @media only screen and (min-width: 321px) and (max-width: 480px) {
   .ExploreDivImg {
@@ -62,6 +138,25 @@
     width: 400px;
     height: 550px;
   }
+  .topcontent{
+
+    position: absolute;
+    top: 5%;
+    left: 17%;
+
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 20px;
+    right:10%
+}
+.topheading{
+  
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.29;
+  text-align: center;
+
+}
 }
 
 @media only screen and (max-width: 320px) {
@@ -73,4 +168,24 @@
     width: 400px;
     height: 550px;
   }
+  .topcontent{
+
+    position: absolute;
+    top: 2%;
+    left: 7%;
+
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 5px;
+ right:7%
+}
+.topheading{
+  
+  font-size: 4px;
+  font-weight: 50;
+  line-height: 1;
+  text-align: center;
+
+
+}
 }
