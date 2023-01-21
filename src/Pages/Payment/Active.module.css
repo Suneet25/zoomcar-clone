@@ -21,13 +21,16 @@
 }
 
 .activeDiv > div:nth-child(2) > div:nth-child(2) {
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
 }
 
 .h1tag {
   /* background-color: lightgrey; */
   padding: 10px;
   text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  background-color: lightgray;
 }
 
 p {
