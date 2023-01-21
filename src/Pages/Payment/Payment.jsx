@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import PAYMENT from "../Payment/Payment.module.css";
 import {
   Avatar,
@@ -7,7 +8,7 @@ import {
   CardHeader,
   Flex,
   Heading,
-  Text,
+ 
 } from "@chakra-ui/react";
 import Active from "./Active";
 import Wallet from "./Wallet";
@@ -15,22 +16,24 @@ import Banking from "./Banking";
 import Credit from "./Credit";
 
 
+let DataObj = JSON.parse(localStorage.getItem("userdata"));
 
-const Payment = () => {
-  // const [pageData, setpageData] = useState(<Active />)
-  const [pageTrue, setpageTrue] = useState(false);
-  // const [pageTrue2, setpageTrue2] = useState(false)
+const Payment = (data) => {
+  const [pageTrue, setpageTrue] = useState("upi");
 
-  const handleChange = () => {
-    setpageTrue(true);
+  // console.log("DataObj", DataObj);
+  console.log("data", data);
+  const handleChange = (value) => {
+    setpageTrue(value);
   };
 
-  // console.log("value", value)
-  // console.log("Wallet", Wallet)
-  // const handleChange2 = () => {
-  //     setpageTrue2(true)
-  // }
+  useEffect(() => {
+    window.addEventListener("load", (event) => {
+      console.log("page is fully loaded");
+    });
+  }, []);
 
+  console.log(data.price);
   return (
     <div className={PAYMENT.payDiv}>
       <div id="first">
@@ -42,7 +45,8 @@ const Payment = () => {
             bg={"white"}
             color={"black"}
             marginTop={"10px"}
-            onClick={handleChange}
+            className={PAYMENT.card}
+            onClick={() => handleChange("upi")}
           >
             <CardHeader>
               <Flex spacing="4">
@@ -66,7 +70,8 @@ const Payment = () => {
             bg={"white"}
             color={"black"}
             marginTop={"10px"}
-            onClick={handleChange}
+            className={PAYMENT.card}
+            onClick={() => handleChange("card")}
           >
             <CardHeader>
               <Flex spacing="4">
@@ -90,7 +95,8 @@ const Payment = () => {
             bg={"white"}
             color={"black"}
             marginTop={"10px"}
-            onClick={handleChange}
+            className={PAYMENT.card}
+            onClick={() => handleChange("wallet")}
           >
             <CardHeader>
               <Flex spacing="4">
@@ -114,7 +120,8 @@ const Payment = () => {
             bg={"white"}
             color={"black"}
             marginTop={"10px"}
-            onClick={handleChange}
+            className={PAYMENT.card}
+            onClick={() => handleChange("netbank")}
           >
             <CardHeader>
               <Flex spacing="4">
@@ -136,32 +143,27 @@ const Payment = () => {
 
         {/* second div starts here */}
 
-        {/* {
-          pageTrue == true ? (
-            <Active />
-          ) : pageTrue == true ? (
-            <Credit />
-          ) : pageTrue == true ? (
-            <Banking />
-          ) : (
-            <Wallet />
-          )
-         
-        } */}
-        {/* {pageData.map((el) => {
-                    return pageData
-                })} */}
-        {/* <Wallet/>  */}
-        {/* <Banking/> */}
-        <Credit/>
-        {/* <Active/> */}
+        {pageTrue == "upi" ? (
+          <Active />
+        ) : pageTrue == "card" ? (
+          <Credit />
+        ) : pageTrue == "netbank" ? (
+          <Banking />
+        ) : pageTrue == "wallet" ? (
+          <Wallet />
+        ) : null}
 
-        {/* end here */}
+
+       
       </div>
 
-      <div id="second">
+      {/* <div className={PAYMENT.SecondSection}>
         <h1 className={PAYMENT.tagH1}>car details box</h1>
-      </div>
+        <div>
+          <h1 className={PAYMENT.SecondH1}>{DataObj.title}</h1>
+          <img src={DataObj.image} alt="" />
+        </div>
+      </div> */}
     </div>
   );
 };
