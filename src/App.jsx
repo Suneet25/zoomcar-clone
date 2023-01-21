@@ -6,12 +6,12 @@ import "./App.css";
 
 // import Wallet from "./Pages/Payment/Wallet";
 
-import Home from "./Pages/HomePage/Home";
+// import Home from "./Pages/HomePage/Home";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
     </div>
   );
 }
