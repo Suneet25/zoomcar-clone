@@ -1,4 +1,9 @@
 import "./App.css";
+<<<<<<< HEAD
+// import AllRoutes from "./Components/AllRoutes";
+
+// import Payment from "./Pages/Payment/Payment";
+=======
 // import AllRoutes from "./Components/AllRoutes";
 // import DateTime from "./Pages/HomePage/DateAndTime";
 // import Active from "./Pages/Payment/Active";

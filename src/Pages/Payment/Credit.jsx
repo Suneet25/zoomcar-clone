@@ -21,10 +21,10 @@ const Credit = () => {
         </div>
 
         {/* input box */}
-        <input type="number" placeholder=' Card Number' style={{border:"1px solid grey",height:"50px",width:"450px"}}  />
+        <input type="number" placeholder='  Card Number' style={{border:"1px solid grey",height:"50px",width:"450px"}}  />
         <div style={{display:"flex" ,justifyContent:"space-between" ,height:"50px",width:"450px",marginTop:"50px"}}>
-            <input type="text" placeholder='   Expiry (MM/YY) '  style={{border:"1px solid grey",height:"50px",width:"220px"}}/>
-            <input type="text" placeholder='  CVV'  style={{border:"1px solid grey",height:"50px",width:"220px"}}/>
+            <input type="calender" placeholder='   Expiry (MM/YY) '  style={{border:"1px solid grey",height:"50px",width:"220px"}}/>
+            <input type="number" placeholder='  CVV'  style={{border:"1px solid grey",height:"50px",width:"220px"}}/>
         </div>
         <br/> 
         <input type="checkbox" name="" id="" /><span style={{color:"grey"}}>  Securely save card details</span>

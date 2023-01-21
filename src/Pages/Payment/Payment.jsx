@@ -8,12 +8,13 @@ import {
   CardHeader,
   Flex,
   Heading,
-  Text,
+ 
 } from "@chakra-ui/react";
 import Active from "./Active";
 import Wallet from "./Wallet";
 import Banking from "./Banking";
 import Credit from "./Credit";
+
 
 let DataObj = JSON.parse(localStorage.getItem("userdata"));
 
@@ -81,7 +82,7 @@ const Payment = (data) => {
                   />
 
                   <Box>
-                    <Heading size="sm">Credit / Debit / ATM Card</Heading>
+                    <Heading size="sm">Credit/ Debit/ ATM Card</Heading>
                     {/* <Text> major cards are supported</Text> */}
                   </Box>
                 </Flex>
@@ -151,6 +152,9 @@ const Payment = (data) => {
         ) : pageTrue == "wallet" ? (
           <Wallet />
         ) : null}
+
+
+       
       </div>
 
       {/* <div className={PAYMENT.SecondSection}>
