@@ -1,10 +1,10 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
-
+import poster2 from "../../Styles/HomePage.module.css";
 const Poster2 = () => {
   return (
-    <Box>
-      <Box style={{ position: "relative" }}>
+    <Box className={poster2.maincontainer}>
+      <Box className={poster2.childcontainer}>
         <Box
           style={{
             width: "100%",
@@ -18,32 +18,20 @@ const Poster2 = () => {
             style={{ height: "100%", width: "100%" }}
           />
         </Box>
-        <Box
-          style={{
-            position: "absolute",
-            top: "5%",
-            left: "17%",
-
-            backgroundColor: "rgba(0,0,0,0.4)",
-            color: "white",
-            // paddingRight: "20px",
-            // fontSize: "34px",
-            // fontWeight: "600",
-            // lineHeight: "1.29",
-            padding: "20px",
-          }}
-        >
+        <Box className={poster2.topcontent}>
           <Heading
-            style={{
-              fontSize: "34px",
-              fontWeight: "600",
-              lineHeight: "1.29",
-              textAlign: "center",
-            }}
+            className={poster2.topheading}
+            fontSize={{ base: "20px", md: "40px", lg: "46px" }}
           >
             Largest car sharing marketplace
           </Heading>
-          <Heading as={"h4"} size="md" mt="20px" textAlign="center">
+          <Heading
+            as={"h4"}
+            size="md"
+            mt="20px"
+            textAlign="center"
+            fontSize={{ base: "15px", md: "32px", lg: "36px" }}
+          >
             Sedans for short distances, SUVs for tough terrains, luxury cars for
             surprises - we’ve got it all!
           </Heading>

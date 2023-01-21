@@ -16,7 +16,10 @@ const Footer = () => {
         <Heading
           as="h4"
           size="md"
-          style={{ paddingLeft: "60px", color: "white" }}
+          style={{
+            paddingLeft: "60px",
+            color: "white",
+          }}
         >
           We operate in many other cities
         </Heading>
@@ -24,7 +27,10 @@ const Footer = () => {
         <Heading
           as="h4"
           size="md"
-          style={{ paddingLeft: "60px", color: "white" }}
+          style={{
+            paddingLeft: "60px",
+            color: "white",
+          }}
         >
           INDIA
         </Heading>
@@ -131,15 +137,7 @@ const Footer = () => {
         >
           Let's keep in touch
         </Heading>
-        <Box
-          style={{
-            paddingLeft: "60px",
-            color: "white",
-            marginTop: "30px",
-            display: "grid",
-            gridTemplateColumns: "repeat(5,50px)",
-          }}
-        >
+        <Box className={foot.socials}>
           <Box>
             <FaTwitter style={{ width: "30px", height: "30px" }} />
           </Box>
@@ -160,13 +158,13 @@ const Footer = () => {
         <Box className={foot.QRcode} style={{}}>
           <Box
             style={{
-              fontSize: "70px",
               fontWeight: "600",
               lineHeight: 1,
               letterSpacing: "normal",
               color: " #e0e0e0",
               opacity: 0.5,
             }}
+            fontSize={{ base: "15px", md: "50px", lg: "70px" }}
           >
             <Text>Never</Text>
             <Text>Stop</Text>
@@ -175,7 +173,11 @@ const Footer = () => {
           <Flex gap={"30px"}>
             <Box>
               <Image src="https://www.zoomcar.com/img/image.png"></Image>
-              <Text color="white" textAlign={"center"}>
+              <Text
+                color="white"
+                textAlign={"center"}
+                fontSize={{ base: "15px", md: "20px", lg: "20" }}
+              >
                 Scan this QR code to
               </Text>
               <Text color="white" textAlign={"center"}>
@@ -183,14 +185,23 @@ const Footer = () => {
               </Text>
             </Box>
             <Box>
-              <Heading style={{ fontSize: "35px", color: "white" }}>
+              <Heading
+                style={{ color: "white" }}
+                fontSize={{ base: "10px", md: "15px", lg: "35px" }}
+              >
                 DOWNLOAD ZOOMCAR APP
               </Heading>
               <br />
-              <Heading style={{ fontSize: "25px", color: "white" }}>
+              <Heading
+                style={{ color: "white" }}
+                fontSize={{ base: "10px", md: "15px", lg: "25px" }}
+              >
                 We have incredible offers, discounts &
               </Heading>
-              <Heading style={{ fontSize: "25px", color: "white" }}>
+              <Heading
+                style={{ color: "white" }}
+                fontSize={{ base: "10px", md: "15px", lg: "25px" }}
+              >
                 much more in our app
               </Heading>
             </Box>
