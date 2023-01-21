@@ -4,14 +4,10 @@ import {
   FormControl,
   FormLabel,
   Input,
-  InputGroup,
-  HStack,
-  InputRightElement,
   Stack,
   Button,
   Heading,
   Text,
-  useColorModeValue,
   Link,
   Image,
 } from "@chakra-ui/react";
@@ -62,12 +58,13 @@ export default function SignupCard() {
       alignItems={"center"}
     >
       <Stack
-        // border={"1px solid red"}
+        border={"1px solid red"}
         spacing={6}
         mx={"auto"}
         // maxW={"450px"}
         // py={12}
         px={6}
+        className={"signup_main"}
       >
         <Image src={Logo} alt="logo" marginBottom={"20px"} />
         <Stack align={"center"}>
