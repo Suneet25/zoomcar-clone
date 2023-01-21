@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 import PAYMENT from "../Payment/Payment.module.css";
 import {
   Avatar,
@@ -16,7 +17,12 @@ import Banking from "./Banking";
 import Credit from "./Credit";
 
 
+
+
 let DataObj = JSON.parse(localStorage.getItem("userdata"));
+console.log(DataObj)
+
+
 
 const Payment = (data) => {
   const [pageTrue, setpageTrue] = useState("upi");
@@ -143,13 +149,13 @@ const Payment = (data) => {
 
         {/* second div starts here */}
 
-        {pageTrue == "upi" ? (
+        {pageTrue === "upi" ? (
           <Active />
-        ) : pageTrue == "card" ? (
+        ) : pageTrue === "card" ? (
           <Credit />
-        ) : pageTrue == "netbank" ? (
+        ) : pageTrue === "netbank" ? (
           <Banking />
-        ) : pageTrue == "wallet" ? (
+        ) : pageTrue === "wallet" ? (
           <Wallet />
         ) : null}
 
