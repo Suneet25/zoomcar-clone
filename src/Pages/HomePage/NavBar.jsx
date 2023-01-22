@@ -316,7 +316,7 @@ const Navbar = () => {
           </Flex>
         </Flex>
       ) : (
-        <Box className={navbar.boxW} px={4} >
+        <Box className={navbar.boxW} px={4}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <Flex gap={"15px"} alignItems="center" direction="row">
               <Box>
