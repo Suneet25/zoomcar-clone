@@ -14,7 +14,6 @@ const Success = () => {
     const handleSuccess =()=>{
        setHeading("Payment Successful")
        setImage("https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif")
-       
     }
 
     useEffect(()=>{
@@ -22,7 +21,7 @@ const Success = () => {
             handleSuccess()
           
 
-            },3000)
+            },3500)
 
     },[])
   return (

@@ -25,8 +25,6 @@ const Wallet = () => {
             <h1 style={{ fontWeight: "bold", fontSize: "25px" }}>
               Mobile Wallet
             </h1>
-            <p> Amount: ₹5000.0</p>
-            {/* checking */}
           </div>
 
           <div>

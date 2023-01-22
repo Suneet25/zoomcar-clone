@@ -1,3 +1,7 @@
+.sucDiv{
+    padding: 2rem 0;
+}
+
 .sucDiv>div:first-child{
     margin: auto;
     /* border: 1px solid black; */

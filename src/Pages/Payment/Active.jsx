@@ -21,7 +21,7 @@ const Active = () => {
       <div>
         <div>
           <h1 className={ACTIVE.h1tag}>Select a UPI App</h1>
-          <p> Amount:₹{"500"}</p>
+          {/* <p> Amount:₹{"500"}</p> */}
         </div>
         <div>
           <img
