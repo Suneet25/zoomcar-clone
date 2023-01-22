@@ -1,7 +1,8 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 import poster1 from "../../Styles/HomePage.module.css";
-
+import PickUp from "./PickUp";
+// import PickUp from "./PickUp";
 const Poster1 = () => {
   return (
     <Box className={poster1.maincontainer}>
@@ -10,7 +11,6 @@ const Poster1 = () => {
           style={{
             width: "100%",
             height: "auto",
-            
           }}
         >
           <img
@@ -19,7 +19,7 @@ const Poster1 = () => {
             style={{ height: "100%", width: "100%" }}
           />
         </Box>
-        <Box className={poster1.topcontent}>
+        <Box className={poster1.topcontent} >
           <Heading
             className={poster1.topheading}
             fontSize={{ base: "20px", md: "40px", lg: "46px" }}
@@ -35,6 +35,10 @@ const Poster1 = () => {
             Book your drive now!
           </Heading>
         </Box>
+        <Box className={poster1.pickup}>
+          <PickUp />
+        </Box>
+
         <Box
           style={{
             position: "relative",

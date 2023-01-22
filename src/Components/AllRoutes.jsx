@@ -8,6 +8,7 @@ import Loginpage from "./Loginpage";
 import SignupCard from "./Signuppage";
 import Hosts from "../Pages/HostPage/HostPage";
 import Success from "../Pages/Payment/Success";
+import DateTime from "../Pages/HomePage/DateAndTime";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -21,6 +22,8 @@ const AllRoutes = () => {
       <Route path="/success" element={<Success />} />
 
 
+      <Route path="/datetime" element={<DateTime />} />
+      {/* <Route path="/pickuplocation" element={} /> */}
     </Routes>
   );
 };
