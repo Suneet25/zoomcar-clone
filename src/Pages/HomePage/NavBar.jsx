@@ -15,6 +15,7 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
+import navbar from "../../Styles/HomeNavbar.module.css";
 import bumBlebee from "..//..//Assets/bumBlebee.jpg";
 import React, { useEffect, useState } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -25,7 +26,7 @@ import { BiCar } from "react-icons/bi";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 
 import { FaUser, FaRegCopy, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -51,6 +52,10 @@ const Navbar = () => {
   //   useEffect(() => {
   //
   //   }, [ dispatch]);
+
+  // let HostClick = () => {
+  //   <Navigate to="/hostpage" />;
+  // };
 
   return (
     <>
@@ -92,7 +97,7 @@ const Navbar = () => {
                     <Flex alignItems={"center"} gap="20px">
                       <FaUser size={"25px"} />
                       <Box>
-                        <Text fontSize="18px">User Name</Text>
+                        <Text fontSize="18px">{name}</Text>
                       </Box>
                     </Flex>
                   </DrawerHeader>
@@ -201,26 +206,32 @@ const Navbar = () => {
                     <hr color="gray"></hr>
                     <Flex alignItems={"center"} gap="10px" height={"50px"}>
                       <RiLogoutBoxRLine size={"22"} />
-                      <Text
-                        fontSize="16px"
-                        cursor="pointer"
-                        // onClick={handleLogout}
-                      >
-                        Logout
-                      </Text>
+                      <RouterLink to="/">
+                        {" "}
+                        <Text
+                          fontSize="16px"
+                          cursor="pointer"
+                          // onClick={handleLogout}
+                          onClick={logoutUser}
+                        >
+                          Logout
+                        </Text>
+                      </RouterLink>
                     </Flex>
                   </DrawerBody>
                 </DrawerContent>
               </Drawer>
             </Box>
             <Box h={7} className="zoomLogoNavbar">
-              <Image
-                className="zoomLogoNavbar"
-                width="120px"
-                height="40px"
-                src={bumBlebee}
-                cursor="pointer"
-              />
+              <RouterLink to="/">
+                <Image
+                  className="zoomLogoNavbar"
+                  width="120px"
+                  height="40px"
+                  src={bumBlebee}
+                  cursor="pointer"
+                />
+              </RouterLink>
             </Box>
           </Flex>
 
@@ -233,7 +244,7 @@ const Navbar = () => {
             // bgColor={"blue"}
           >
             <Text fontWeight={"600"} fontSize="18px">
-              <Link to="/host">
+              <RouterLink to="/host">
                 <Button
                   className="navbar_hostButton"
                   style={{
@@ -245,7 +256,7 @@ const Navbar = () => {
                 >
                   Become a Host
                 </Button>
-              </Link>
+              </RouterLink>
             </Text>
             <Text fontWeight={"600"} fontSize="18px" marginRight="80px">
               <Link to="/zms">ZMS</Link>
@@ -289,7 +300,7 @@ const Navbar = () => {
                 _hover={{ bgColor: "white", color: "black" }}
               >
                 {name}
-              </Button>{" "}
+              </Button>
               <RouterLink to="/">
                 <Button
                   colorScheme="#2B6CB0"
@@ -305,7 +316,7 @@ const Navbar = () => {
           </Flex>
         </Flex>
       ) : (
-        <Box bg={"black"} color={"white"} px={4} width="100%">
+        <Box className={navbar.boxW} px={4}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <Flex gap={"15px"} alignItems="center" direction="row">
               <Box>
@@ -380,25 +391,30 @@ const Navbar = () => {
                       <hr color="gray"></hr>
                       <Flex alignItems={"center"} gap="10px" height={"50px"}>
                         <RiLogoutBoxRLine size={"22"} />
-                        <Text
-                          fontSize="16px"
-                          cursor="pointer"
-                          // onClick={handleLogin}
-                        >
-                          Login
-                        </Text>
+                        <RouterLink to="/login">
+                          {" "}
+                          <Text
+                            fontSize="16px"
+                            cursor="pointer"
+                            // onClick={handleLogin}
+                          >
+                            Login
+                          </Text>
+                        </RouterLink>
                       </Flex>
                     </DrawerBody>
                   </DrawerContent>
                 </Drawer>
               </Box>
-              <Image
-                className="zoomLogoNavbar"
-                width="120px"
-                height="60px"
-                src={bumBlebee}
-                cursor="pointer"
-              />
+              <RouterLink to="/">
+                <Image
+                  className="zoomLogoNavbar"
+                  width="120px"
+                  height="60px"
+                  src={bumBlebee}
+                  cursor="pointer"
+                />
+              </RouterLink>
             </Flex>
 
             <Flex
@@ -408,8 +424,12 @@ const Navbar = () => {
               direction="row"
               width="40%"
             >
-              <Text fontWeight={"600"} fontSize="auto">
-                <Link to="/host">
+              <Text
+                fontWeight={"600"}
+                fontSize="auto"
+                visibility={{ base: "hidden", lg: "visible" }}
+              >
+                <RouterLink to="/host">
                   <Button
                     className="navbar_hostButton"
                     style={{
@@ -420,9 +440,13 @@ const Navbar = () => {
                   >
                     Become a Host
                   </Button>
-                </Link>
+                </RouterLink>
               </Text>
-              <Text fontWeight={"600"} fontSize="auto">
+              <Text
+                fontWeight={"600"}
+                fontSize="auto"
+                visibility={{ base: "hidden", lg: "visible" }}
+              >
                 <Link to="/zms">ZMS</Link>
               </Text>
               {/* <Menu className="userMenuNavbar">
@@ -442,7 +466,11 @@ const Navbar = () => {
                     Login/SignUp
                   </Text>
                 </MenuButton>
-                <MenuList alignItems={"center"} backgroundColor="black">
+                <MenuList
+                  alignItems={"center"}
+                  backgroundColor="white"
+                  color="black"
+                >
                   <MenuItem onClick={handleLogin}>Login</MenuItem>
                 </MenuList>
               </Menu> */}
