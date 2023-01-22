@@ -5,7 +5,7 @@ import { VscCalendar } from "react-icons/vsc";
 import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { Box, Flex, Text, Button } from "@chakra-ui/react";
-// import { getLocalData } from "../localStorage";
+import { getLocalData } from "../HomePage/LocalStorage";
 
 const PickUp = () => {
   const [firstDate, setfirstDate] = useState("");
@@ -13,11 +13,11 @@ const PickUp = () => {
   const [userCity, setUserCity] = useState("");
   const navigate = useNavigate();
 
-  //   useEffect(() => {
-  //     setUserCity(getLocalData("userLocation"));
-  //     setfirstDate(getLocalData("firstDay"));
-  //     setlastDate(getLocalData("lastDay"));
-  //   }, []);
+  useEffect(() => {
+    setUserCity(getLocalData("userLocation"));
+    setfirstDate(getLocalData("firstDay"));
+    setlastDate(getLocalData("lastDay"));
+  }, []);
 
   return (
     <Box>
@@ -48,30 +48,27 @@ const PickUp = () => {
             <FaCircle size={"10px"} color="green" />
             <Text color="gray">Pick Up City, Airpot, Address or Hotel</Text>
           </Box>
-          {userCity ? (
-            <Flex
-              onClick={() => navigate("/datetime")}
-              border="1px solid gary"
-              borderRadius="7px"
-              padding="10px"
-              textAlign="left"
-              boxShadow="2px 2px 2px gray"
-              background="white"
-              width="400px"
-              height="50px"
-              display="flex"
-              alignItems="center"
-              gap="10px"
-              cursor="pointer"
-            >
-              <VscCalendar />
-              {firstDate ? <Text color="gray">{firstDate}</Text> : "Start Date"}
-              <BsArrowRight />
-              {lastDate ? <Text color="gray">{lastDate}</Text> : "End Date"}
-            </Flex>
-          ) : (
-            ""
-          )}
+
+          <Flex
+            onClick={() => navigate("/datetime")}
+            border="1px solid gary"
+            borderRadius="7px"
+            padding="10px"
+            textAlign="left"
+            boxShadow="2px 2px 2px gray"
+            background="white"
+            width="400px"
+            height="50px"
+            display="flex"
+            alignItems="center"
+            gap="10px"
+            cursor="pointer"
+          >
+            <VscCalendar />
+            {firstDate ? <Text color="gray">{firstDate}</Text> : "Start Date"}
+            <BsArrowRight />
+            {lastDate ? <Text color="gray">{lastDate}</Text> : "End Date"}
+          </Flex>
 
           <Button
             border="1px solid gary"
