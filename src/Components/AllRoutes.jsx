@@ -7,6 +7,7 @@ import Payment from "../Pages/Payment/Payment";
 import Loginpage from "./Loginpage";
 import SignupCard from "./Signuppage";
 import Hosts from "../Pages/HostPage/HostPage";
+import Success from "../Pages/Payment/Success";
 import DateTime from "../Pages/HomePage/DateAndTime";
 const AllRoutes = () => {
   return (
@@ -18,6 +19,9 @@ const AllRoutes = () => {
       <Route path="/login" element={<Loginpage />} />
       <Route path="/signup" element={<SignupCard />} />
       <Route path="/host" element={<Hosts />} />
+      <Route path="/success" element={<Success />} />
+
+
       <Route path="/datetime" element={<DateTime />} />
       {/* <Route path="/pickuplocation" element={} /> */}
     </Routes>
