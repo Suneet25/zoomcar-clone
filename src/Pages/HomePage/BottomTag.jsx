@@ -10,25 +10,37 @@ const BottomTag = () => {
         padding: "30px 80px 30px 80px",
       }}
     >
-      <Flex style={{ justifyContent: "space-evenly" }}>
+      <Flex
+        style={{ justifyContent: "space-evenly" }}
+        gap={{ base: "15px", md: "15px", lg: "20px" }}
+      >
         <Box style={{ cursor: "pointer" }}>
           <Link>
             {" "}
-            <Heading as={"h5"} size="md">
+            <Heading
+              as={"h5"}
+              fontSize={{ base: "15px", md: "15px", lg: "20px" }}
+            >
               ABOUT US
             </Heading>
           </Link>
         </Box>
         <Box style={{ cursor: "pointer" }}>
           <Link>
-            <Heading as={"h5"} size="md">
+            <Heading
+              as={"h5"}
+              fontSize={{ base: "15px", md: "15px", lg: "20px" }}
+            >
               BLOGS
             </Heading>
           </Link>
         </Box>
         <Box style={{ cursor: "pointer" }}>
           <Link>
-            <Heading as={"h5"} size="md">
+            <Heading
+              as={"h5"}
+              fontSize={{ base: "15px", md: "15px", lg: "20px" }}
+            >
               CAREERS
             </Heading>
           </Link>
@@ -36,7 +48,10 @@ const BottomTag = () => {
         <Box style={{ cursor: "pointer" }}>
           <Link>
             {" "}
-            <Heading as={"h5"} size="md">
+            <Heading
+              as={"h5"}
+              fontSize={{ base: "15px", md: "15px", lg: "20px" }}
+            >
               HELP & SUPPORT
             </Heading>
           </Link>

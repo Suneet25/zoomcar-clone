@@ -19,11 +19,12 @@ const Home = () => {
       <Poster2 />
       <CorouselTwo />
       <Poster3 />
+      <BottomTag />
       <Footer />
       {/* <AboutPage /> */}
-      <BottomTag />
-      <SignupCard />
-      <Loginpage />
+
+      {/* <SignupCard />
+      <Loginpage /> */}
     </div>
   );
 };

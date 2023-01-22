@@ -4,8 +4,9 @@ import CarsPage from "../Pages/CarsPage/CarsPage";
 import SingleCarsPage from "../Pages/CarsPage/SingleCarsPage";
 import Home from "../Pages/HomePage/Home";
 import Payment from "../Pages/Payment/Payment";
-import Picklocation from "../Pages/PickupLocation/Pickuplocation";
-
+import Loginpage from "./Loginpage";
+import SignupCard from "./Signuppage";
+import Hosts from "../Pages/HostPage/HostPage";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -13,7 +14,9 @@ const AllRoutes = () => {
       <Route path="/cars" element={<CarsPage />} />
       <Route path="/cars/:id" element={<SingleCarsPage />} />
       <Route path="/payment" element={<Payment />} />
-      <Route path="/pickup" element={<Picklocation />} />
+      <Route path="/login" element={<Loginpage />} />
+      <Route path="/signup" element={<SignupCard />} />
+      <Route path="/host" element={<Hosts />} />
     </Routes>
   );
 };
