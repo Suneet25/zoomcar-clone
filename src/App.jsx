@@ -1,5 +1,5 @@
 import "./App.css";
-// import AllRoutes from "./Components/AllRoutes";
+import AllRoutes from "./Components/AllRoutes";
 
 // import Payment from "./Pages/Payment/Payment";
 // import Active from "./Pages/Payment/Active";
@@ -16,7 +16,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      {/* <AllRoutes/> */}
+      <AllRoutes/>
+      
     </div>
   );
 }
