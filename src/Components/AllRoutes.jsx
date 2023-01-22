@@ -21,7 +21,6 @@ const AllRoutes = () => {
       <Route path="/host" element={<Hosts />} />
       <Route path="/success" element={<Success />} />
 
-
       <Route path="/datetime" element={<DateTime />} />
       {/* <Route path="/pickuplocation" element={} /> */}
     </Routes>
