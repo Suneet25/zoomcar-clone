@@ -11,18 +11,17 @@ import {
 export const getCarsData = () => (dispatch) => {
   dispatch({ type: CARS_LOADING });
   return axios
-    .get("http://localhost:8080/cars")
+    .get("https://backendjson-production.up.railway.app/api/cars")
     .then((response) =>
       dispatch({ type: CARS_SUCCESS, payload: response.data })
     )
     .catch((error) => dispatch({ type: CARS_FAILURE }));
 };
 
-
 export const getSingleCarsData = (id) => (dispatch) => {
   dispatch({ type: SINGLE_CARS_LOADING });
   return axios
-    .get(`http://localhost:8080/cars/${id}`)
+    .get(`https://backendjson-production.up.railway.app/api/cars/${id}`)
     .then((response) =>
       dispatch({ type: SINGLE_CARS_SUCCESS, payload: response.data })
     )
