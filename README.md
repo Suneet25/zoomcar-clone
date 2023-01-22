@@ -39,15 +39,15 @@
 Tasks for all Team mate
 
 <hr>
-<b>Suneet</b> - Navabr, sidebar, Landingpage,HostPage,DatePage,Routing
+<b>Suneet</b> - Navabr, sidebar, Landingpage,HostPage,DatePage,Routing,Responsiveness
 <br>
-<b>Papri</b> - SignupPage, LoginPage,PrivateRouting,Responsiveness,Routing
+<b>Papri</b> - SignupPage, LoginPage,PrivateRouting,Routing,Responsiveness
 <br>
 <b>Nitin</b> - Cars Page (sorting and filter functionality),SingleCarPage
 Process to pay page - This page is Private Page Means Protected without login can't access,
-LocationPage,Routing
+LocationPage,Routing,Responsiveness
 <br>
-<b>Jyoti</b> - Payment page, Process to pay page with location thing,Routing
+<b>Jyoti</b> - Payment page, Process to pay page with location thing,Routing,Responsiveness
 <br>
 <br>
 <br>
