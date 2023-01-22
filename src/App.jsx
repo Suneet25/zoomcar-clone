@@ -1,11 +1,7 @@
 import "./App.css";
-<<<<<<< HEAD
 // import AllRoutes from "./Components/AllRoutes";
 
 // import Payment from "./Pages/Payment/Payment";
-=======
-// import AllRoutes from "./Components/AllRoutes";
-// import DateTime from "./Pages/HomePage/DateAndTime";
 // import Active from "./Pages/Payment/Active";
 // import Payment from "./Pages/Payment/Payment";
 // import Banking from "./Pages/Payment/Banking";
@@ -20,10 +16,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
-      <AllRoutes /> */}
-      {/* <PickUp /> */}
-      {/* <DateTime /> */}
+      {/* <AllRoutes/> */}
     </div>
   );
 }
