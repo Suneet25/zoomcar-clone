@@ -1,15 +1,16 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
-
+import poster1 from "../../Styles/HomePage.module.css";
+import PickUp from "./PickUp";
+// import PickUp from "./PickUp";
 const Poster1 = () => {
   return (
-    <Box>
-      <Box style={{ position: "relative" }}>
+    <Box className={poster1.maincontainer}>
+      <Box className={poster1.childcontainer}>
         <Box
           style={{
             width: "100%",
-            height: "680px",
-            // border: "2px solid red",
+            height: "auto",
           }}
         >
           <img
@@ -18,35 +19,26 @@ const Poster1 = () => {
             style={{ height: "100%", width: "100%" }}
           />
         </Box>
-        <Box
-          style={{
-            position: "absolute",
-            top: "5%",
-            left: "17%",
-
-            backgroundColor: "rgba(0,0,0,0.4)",
-            color: "white",
-            // paddingRight: "20px",
-            // fontSize: "34px",
-            // fontWeight: "600",
-            // lineHeight: "1.29",
-            padding: "20px",
-          }}
-        >
+        <Box className={poster1.topcontent} >
           <Heading
-            style={{
-              fontSize: "34px",
-              fontWeight: "600",
-              lineHeight: "1.29",
-              textAlign: "center",
-            }}
+            className={poster1.topheading}
+            fontSize={{ base: "20px", md: "40px", lg: "46px" }}
           >
             The perfect car for your next trip is just around the corner
           </Heading>
-          <Heading as={"h4"} size="md" mt="20px" textAlign="center">
+          <Heading
+            as={"h4"}
+            mt="20px"
+            textAlign="center"
+            fontSize={{ base: "15px", md: "32px", lg: "36px" }}
+          >
             Book your drive now!
           </Heading>
         </Box>
+        <Box className={poster1.pickup}>
+          <PickUp />
+        </Box>
+
         <Box
           style={{
             position: "relative",

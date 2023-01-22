@@ -1,46 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import single from "../../Styles/SingleCarsPage.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { getSingleCarsData } from "../../Redux/CarsData/carsData.action";
+import Payment from "../Payment/Payment";
 
 const SingleCarsPage = () => {
   const { data } = useSelector((store) => store.CarsReducer);
-  const [value, setvalue] = useState(0);
   const [Carprice, setCarprice] = useState(data.price);
   const [update, setupdate] = useState(0);
   const dispatch = useDispatch();
   const Basic = 375;
-  // const [SinglePageData, setSinglePageData] = useState({});
+  const Standerd = 436;
+  const Advance = 465;
 
-  //   <FaArrowLeft cursor="pointer" onClick={() => navigate("/")} />
+  // console.log(data)
+
   const { id } = useParams();
-  // console.log("id ", id);
 
-  const handleValueChange = (e) => {
-    // setvalue(Number(e.target.value));
+  const handleValueChange = () => {
     setCarprice(Number(data.price));
     setupdate(Basic + data.price);
   };
+  const handleValueChange2 = () => {
+    setCarprice(Number(data.price));
+    setupdate(Standerd + data.price);
+  };
+  const handleValueChange3 = () => {
+    setCarprice(Number(data.price));
+    setupdate(Advance + data.price);
+  };
 
-  console.log("Input value on top ", value);
-  // console.log("Basic ", Basic);
-  // console.log(typeof value);
-  console.log("Carprice", Carprice);
-  // console.log("data.price", data.price);
-  // console.log(typeof Carprice);
-  console.log("update value after", update);
-  // console.log(typeof update);
-  // console.log("SinglePageData", SinglePageData);
-
-  // console.log("data ", data);
-
-  // useEffect(() => {
-  // }, [value, Carprice]);
+  const handlePassdata = () => {
+    localStorage.setItem("userdata", JSON.stringify(data));
+  };
 
   useEffect(() => {
     dispatch(getSingleCarsData(id));
-    // setSinglePageData(data);
   }, [id]);
   return (
     <>
@@ -133,11 +129,7 @@ const SingleCarsPage = () => {
                   <b>1. Basic (₹375)</b>
                   <div>
                     <label class={single.container}>
-                      <input
-                        value={375}
-                        onClick={handleValueChange}
-                        type="checkbox"
-                      />
+                      <input onClick={handleValueChange} type="checkbox" />
                       <span class={single.checkmark}></span>
                     </label>
                   </div>
@@ -149,7 +141,7 @@ const SingleCarsPage = () => {
                   <b>2. Standard (₹436)</b>
                   <div>
                     <label class={single.container}>
-                      <input type="checkbox" />
+                      <input onClick={handleValueChange2} type="checkbox" />
                       <span class={single.checkmark}></span>
                     </label>
                   </div>
@@ -170,7 +162,7 @@ const SingleCarsPage = () => {
                   <b>3. Peace of Mind (₹465)</b>
                   <div>
                     <label class={single.container}>
-                      <input type="checkbox" />
+                      <input onClick={handleValueChange3} type="checkbox" />
                       <span class={single.checkmark}></span>
                     </label>
                   </div>
@@ -195,7 +187,10 @@ const SingleCarsPage = () => {
             </div>
             <Link to="/payment">
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <button className={single.RightSectionPayButton}>
+                <button
+                  onClick={handlePassdata}
+                  className={single.RightSectionPayButton}
+                >
                   PROCCED TO PAY ₹ {update > data.price ? update : data.price}
                 </button>
               </div>

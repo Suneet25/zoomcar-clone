@@ -12,6 +12,10 @@ import {
   Text,
   Image,
   useColorModeValue,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
@@ -24,8 +28,10 @@ export default function Loginpage() {
   const [Password, setPassword] = useState("");
   const [load, setload] = useState(false);
   const navigate = useNavigate();
-  const { loginUser, logoutUser } = useContext(AuthContext);
-
+  const { isAuth, loginUser, logoutUser } = useContext(AuthContext);
+  if (isAuth) {
+    navigate("/");
+  }
   const login = async () => {
     setload(true);
 
@@ -47,6 +53,7 @@ export default function Loginpage() {
         alert("Please enter right email or password!");
       } else {
         alert("Login Successfull!");
+
         navigate("");
       }
       console.log(Auth);

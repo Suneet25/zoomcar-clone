@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import styles from "../HomePage/HomeCorousel.module.css";
+import styles from "../../Styles/HomePage.module.css";
 import "react-multi-carousel/lib/styles.css";
 import { Heading } from "@chakra-ui/react";
 let imageData = [
