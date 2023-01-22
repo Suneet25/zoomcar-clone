@@ -10,7 +10,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 
-import ACTIVE from "../Payment/Active.module.css";
+import ACTIVE from "../../Styles/Active.module.css";
 
 const Active = () => {
   return (

@@ -24,13 +24,19 @@ const AllRoutes = () => {
           </PrivateRoute>
         }
       />
-      <Route path="/payment" element={<Payment />} />
+      <Route
+        path="/payment"
+        element={
+          <PrivateRoute>
+            <Payment />
+          </PrivateRoute>
+        }
+      />
       <Route path="/login" element={<Loginpage />} />
       <Route path="/signup" element={<SignupCard />} />
       <Route path="/host" element={<Hosts />} />
       <Route path="/success" element={<Success />} />
       <Route path="/pickup" element={<Picklocation />} />
-
       <Route path="/datetime" element={<DateTime />} />
     </Routes>
   );
