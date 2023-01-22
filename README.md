@@ -1,32 +1,54 @@
-## Zoomcar clone working on it...
+## Working on Zoomcar clone....
+
+<h1>Landing Page</h1>
+<br>
+
+![image](./readme_images/s1.png)
+<br>
+
+<h1>Login Page</h1>
+<br>
+
+![image](./readme_images/s6.png)
+
+<br>
+<h1>Cars Page</h1>
+<br>
+
+![image](./readme_images/s2.png)
+<br>
+
+<h1>Single Car Page</h1>
+<br>
+
+![image](./readme_images/s3.png)
+<br>
+
+<h1>Payment Page</h1>
+<br>
+
+![image](./readme_images/s4.png)
+<br>
+
+<h1>Payment Successful Page</h1>
+<br>
+
+![image](./readme_images/s5.png)
+<br>
 
 Tasks for all Team mate
 
-Suneet - Navabr, sidebar, HOmepage 
-
-Papri - Signup Login, Login navbar change 
-
-Abhishek - Calander page,  Host page
-
-Jyoti - Payment page, Process to pay page with location thing 
-
-Nitin - Cars Page (search functionality),
-Process to pay page - This page is Private Page Means Protected without login can't access
-
-
-
-Media Queries
-
-  @media only screen and (min-width: 769px) and (max-width: 1110px) {
-    
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    
-  }
-  @media only screen and (min-width: 321px) and (max-width: 480px) {
-   
-  }
-  
-  @media only screen and (max-width: 320px) {
-   
-  }
+<hr>
+<b>Suneet</b> - Navabr, sidebar, Landingpage,HostPage,DatePage,Routing
+<br>
+<b>Papri</b> - SignupPage, LoginPage,Responsiveness,Routing
+<br>
+<b>Nitin</b> - Cars Page (sorting and filter functionality),SingleCarPage
+Process to pay page - This page is Private Page Means Protected without login can't access,
+LocationPage,Routing
+<br>
+<b>Jyoti</b> - Payment page, Process to pay page with location thing,Routing
+<br>
+<br>
+<br>
+<h3>Thank You 🙂
