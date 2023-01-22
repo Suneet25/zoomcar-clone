@@ -10,7 +10,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 
-import ACTIVE from "../Payment/Active.module.css";
+import ACTIVE from "../../Styles/Active.module.css";
 
 const Active = () => {
   return (
@@ -21,7 +21,7 @@ const Active = () => {
       <div>
         <div>
           <h1 className={ACTIVE.h1tag}>Select a UPI App</h1>
-          <p> Amount:₹{"500"}</p>
+          {/* <p> Amount:₹{"500"}</p> */}
         </div>
         <div>
           <img

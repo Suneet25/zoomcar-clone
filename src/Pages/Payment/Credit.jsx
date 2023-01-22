@@ -46,7 +46,7 @@ const Credit = () => {
         <div style={mainDiv}>
           <div>
             <h1 style={{ fontWeight: "bold", fontSize: "25px" }}>Enter Card Details</h1>
-            <p> Amount: ₹5000.0</p>
+            {/* <p> Amount: ₹5000.0</p> */}
           </div>
 
           <div>

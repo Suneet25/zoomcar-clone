@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-import PAYMENT from "../Payment/Payment.module.css";
+import PAYMENT from "../../Styles/Payment.module.css";
 import {
   Avatar,
   Box,
