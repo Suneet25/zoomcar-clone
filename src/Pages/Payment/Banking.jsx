@@ -27,7 +27,7 @@ const Banking = () => {
             <h1 style={{ fontWeight: "bold", fontSize: "25px" }}>
               Net Banking
             </h1>
-            <p> Amount: ₹5000.0</p>
+            {/* <p> Amount: ₹5000.0</p> */}
           </div>
 
           <div>
