@@ -41,7 +41,7 @@ Tasks for all Team mate
 <hr>
 <b>Suneet</b> - Navabr, sidebar, Landingpage,HostPage,DatePage,Routing
 <br>
-<b>Papri</b> - SignupPage, LoginPage,Responsiveness,Routing
+<b>Papri</b> - SignupPage, LoginPage,PrivateRouting,Responsiveness,Routing
 <br>
 <b>Nitin</b> - Cars Page (sorting and filter functionality),SingleCarPage
 Process to pay page - This page is Private Page Means Protected without login can't access,
