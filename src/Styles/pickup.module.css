@@ -1,0 +1,200 @@
+
+.topbox
+{
+    
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align: left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:400px;
+    height:50px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    cursor:pointer
+}
+
+.bottombox
+{
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align:left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:400px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+.button{
+    border:1px solid gary;
+    box-shadow:2px 2px 2px gray;
+    width:400px;
+    height:50px
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1110px) {
+    .topbox
+{
+  
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align: left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:400px;
+    height:50px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    cursor:pointer
+}
+.bottombox
+{
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align:left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:400px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+.button{
+    border:1px solid gary;
+    box-shadow:2px 2px 2px gray;
+    width:400px;
+    height:50px
+}
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .topbox
+    {
+      
+        border:1px solid gary;
+        border-radius:7px;
+        padding:10px;
+        text-align: left;
+        box-shadow:2px 2px 2px gray;
+        background:white;
+        width:400px;
+        height:50px;
+        display:flex;
+        align-items: center;
+        gap:10px;
+        cursor:pointer
+    }
+    .bottombox
+{
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align:left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:400px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+.button{
+    border:1px solid gary;
+    box-shadow:2px 2px 2px gray;
+    width:400px;
+    height:50px
+}
+  }
+  @media only screen and (min-width: 321px) and (max-width: 480px) {
+    .topbox
+{
+  
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align: left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:300px;
+    height:50px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    cursor:pointer
+}
+.bottombox
+{
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align:left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:300px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+.button{
+    border:1px solid gary;
+    box-shadow:2px 2px 2px gray;
+    width:300px;
+    height:50px
+}
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .topbox
+    {
+      
+        border:1px solid gary;
+        border-radius:7px;
+        padding:10px;
+        text-align: left;
+        box-shadow:2px 2px 2px gray;
+        background:white;
+        width:250px;
+        height:50px;
+        display:flex;
+        align-items: center;
+        gap:10px;
+        cursor:pointer
+    }
+    .bottombox
+{
+    border:1px solid gary;
+    border-radius:7px;
+    padding:10px;
+    text-align:left;
+    box-shadow:2px 2px 2px gray;
+    background:white;
+    width:250px;
+        height:50px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+.button{
+    border:1px solid gary;
+    box-shadow:2px 2px 2px gray;
+    width:250px;
+    height:50px;
+}
+  }
+  

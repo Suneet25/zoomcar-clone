@@ -60,169 +60,183 @@ const Navbar = () => {
   return (
     <>
       {isAuth ? (
-        <Flex
-          h={16}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          bg={"black"}
-          color={"white"}
-          px={4}
-          padding="25px"
-        >
-          <Flex gap={"15px"} alignItems="center" direction="row">
-            <Box>
-              <HamburgerIcon
-                w={6}
-                h={5}
-                color="white.500"
-                onClick={onOpen}
-                cursor="pointer"
-                marginRight={"20px"}
-              >
-                Open
-              </HamburgerIcon>
-              <Drawer
-                placement="left"
-                onClose={onClose}
-                isOpen={isOpen}
-                size="sm"
-              >
-                <DrawerOverlay />
-                <DrawerContent bg={"white"} color={"gray.700"}>
-                  <DrawerHeader
-                    borderBottomWidth="1px"
-                    bg="black"
-                    color="white"
-                  >
-                    <Flex alignItems={"center"} gap="20px">
-                      <FaUser size={"25px"} />
-                      <Box>
-                        <Text fontSize="18px">{name}</Text>
-                      </Box>
-                    </Flex>
-                  </DrawerHeader>
-                  <DrawerBody>
-                    <Flex
-                      alignItems="center"
-                      height="50px"
-                      justifyContent="space-between"
+        <Box className={navbar.boxW} px={4}>
+          <Flex
+            h={16}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            flexWrap={"wrap"}
+          >
+            <Flex gap={"15px"} alignItems="center" direction="row">
+              <Box>
+                <HamburgerIcon
+                  w={6}
+                  h={5}
+                  color="white.500"
+                  onClick={onOpen}
+                  cursor="pointer"
+                  marginRight={"20px"}
+                >
+                  Open
+                </HamburgerIcon>
+                <Drawer
+                  placement="left"
+                  onClose={onClose}
+                  isOpen={isOpen}
+                  size="sm"
+                >
+                  <DrawerOverlay />
+                  <DrawerContent bg={"white"} color={"gray.700"}>
+                    <DrawerHeader
+                      borderBottomWidth="1px"
+                      bg="black"
+                      color="white"
                     >
-                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                        <GiTwoCoins size={"22"} color="black" />
-                        <Text fontSize="16px" cursor="pointer">
-                          Credits
-                        </Text>
+                      <Flex alignItems={"center"} gap="20px">
+                        <FaUser size={"25px"} />
+                        <Box>
+                          <Text fontSize="18px">{name}</Text>
+                        </Box>
                       </Flex>
-                      <Text fontWeight="600" fontSize="16px" color="green.500">
-                        {0}
-                      </Text>
-                    </Flex>
-                    <Flex
-                      alignItems="center"
-                      height="50px"
-                      justifyContent="space-between"
-                    >
-                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                        <TbCoin size={"22"} />
-                        <Text fontSize="16px" cursor="pointer">
-                          Z-POINTS
-                        </Text>
-                      </Flex>
-                      <Text fontWeight="600" fontSize="16px" color="green.500">
-                        {320}
-                      </Text>
-                    </Flex>
-                    <Flex
-                      alignItems="center"
-                      height="50px"
-                      justifyContent="space-between"
-                    >
-                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                        <MdOutlineAccountBalanceWallet size={"22"} />
-                        <Text fontSize="16px" cursor="pointer">
-                          Paytm wallet
-                        </Text>
-                      </Flex>
-                      <Text fontWeight="600" fontSize="16px" color="green.500">
-                        {"Link Wallet"}
-                      </Text>
-                    </Flex>
-                    <hr color="gray"></hr>
-                    <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                      <BiCar size={"22"} />
-                      <Text fontSize="16px" cursor="pointer">
-                        My Trips
-                      </Text>
-                    </Flex>
-                    <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                      <MdVerifiedUser size={"22"} />
-                      <Text fontSize="16px" cursor="pointer">
-                        Profile Verification
-                      </Text>
-                    </Flex>
-                    <Flex
-                      alignItems="center"
-                      height="50px"
-                      justifyContent="space-between"
-                    >
-                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                        <FaMapMarkerAlt size={"22"} />
-                        <Text fontSize="16px">
-                          <Link
-                            to={"/location"}
-                            style={{
-                              textDecoration: "none",
-                              border: "none",
-                              backgroundColor: "white",
-                            }}
-                          >
-                            Change City
-                          </Link>
-                        </Text>
-                      </Flex>
-                      <Text fontWeight="600" fontSize="16px" color="green.500">
-                        UserCity
-                      </Text>
-                    </Flex>
-                    <hr color="gray"></hr>
-                    <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                      <FaRegCopy size={"22"} />
-                      <Text fontSize="16px" cursor="pointer">
-                        Zoomcar Fleet Vehicles Policies
-                      </Text>
-                    </Flex>
-                    <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                      <FaRegCopy size={"22"} />
-                      <Text fontSize="16px" cursor="pointer">
-                        Zoomcar Host Vehicles Policies
-                      </Text>
-                    </Flex>
-                    <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                      <FaPhone size={"22"} />
-                      <Text fontSize="16px" cursor="pointer">
-                        Help & Support
-                      </Text>
-                    </Flex>
-                    <hr color="gray"></hr>
-                    <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                      <RiLogoutBoxRLine size={"22"} />
-                      <RouterLink to="/">
-                        {" "}
+                    </DrawerHeader>
+                    <DrawerBody>
+                      <Flex
+                        alignItems="center"
+                        height="50px"
+                        justifyContent="space-between"
+                      >
+                        <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                          <GiTwoCoins size={"22"} color="black" />
+                          <Text fontSize="16px" cursor="pointer">
+                            Credits
+                          </Text>
+                        </Flex>
                         <Text
+                          fontWeight="600"
                           fontSize="16px"
-                          cursor="pointer"
-                          // onClick={handleLogout}
-                          onClick={logoutUser}
+                          color="green.500"
                         >
-                          Logout
+                          {0}
                         </Text>
-                      </RouterLink>
-                    </Flex>
-                  </DrawerBody>
-                </DrawerContent>
-              </Drawer>
-            </Box>
-            <Box h={7} className="zoomLogoNavbar">
+                      </Flex>
+                      <Flex
+                        alignItems="center"
+                        height="50px"
+                        justifyContent="space-between"
+                      >
+                        <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                          <TbCoin size={"22"} />
+                          <Text fontSize="16px" cursor="pointer">
+                            Z-POINTS
+                          </Text>
+                        </Flex>
+                        <Text
+                          fontWeight="600"
+                          fontSize="16px"
+                          color="green.500"
+                        >
+                          {320}
+                        </Text>
+                      </Flex>
+                      <Flex
+                        alignItems="center"
+                        height="50px"
+                        justifyContent="space-between"
+                      >
+                        <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                          <MdOutlineAccountBalanceWallet size={"22"} />
+                          <Text fontSize="16px" cursor="pointer">
+                            Paytm wallet
+                          </Text>
+                        </Flex>
+                        <Text
+                          fontWeight="600"
+                          fontSize="16px"
+                          color="green.500"
+                        >
+                          {"Link Wallet"}
+                        </Text>
+                      </Flex>
+                      <hr color="gray"></hr>
+                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                        <BiCar size={"22"} />
+                        <Text fontSize="16px" cursor="pointer">
+                          My Trips
+                        </Text>
+                      </Flex>
+                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                        <MdVerifiedUser size={"22"} />
+                        <Text fontSize="16px" cursor="pointer">
+                          Profile Verification
+                        </Text>
+                      </Flex>
+                      <Flex
+                        alignItems="center"
+                        height="50px"
+                        justifyContent="space-between"
+                      >
+                        <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                          <FaMapMarkerAlt size={"22"} />
+                          <Text fontSize="16px">
+                            <Link
+                              to={"/location"}
+                              style={{
+                                textDecoration: "none",
+                                border: "none",
+                                backgroundColor: "white",
+                              }}
+                            >
+                              Change City
+                            </Link>
+                          </Text>
+                        </Flex>
+                        <Text
+                          fontWeight="600"
+                          fontSize="16px"
+                          color="green.500"
+                        >
+                          UserCity
+                        </Text>
+                      </Flex>
+                      <hr color="gray"></hr>
+                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                        <FaRegCopy size={"22"} />
+                        <Text fontSize="16px" cursor="pointer">
+                          Zoomcar Fleet Vehicles Policies
+                        </Text>
+                      </Flex>
+                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                        <FaRegCopy size={"22"} />
+                        <Text fontSize="16px" cursor="pointer">
+                          Zoomcar Host Vehicles Policies
+                        </Text>
+                      </Flex>
+                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                        <FaPhone size={"22"} />
+                        <Text fontSize="16px" cursor="pointer">
+                          Help & Support
+                        </Text>
+                      </Flex>
+                      <hr color="gray"></hr>
+                      <Flex alignItems={"center"} gap="10px" height={"50px"}>
+                        <RiLogoutBoxRLine size={"22"} />
+                        <RouterLink to="/">
+                          {" "}
+                          <Text
+                            fontSize="16px"
+                            cursor="pointer"
+                            // onClick={handleLogout}
+                            onClick={logoutUser}
+                          >
+                            Logout
+                          </Text>
+                        </RouterLink>
+                      </Flex>
+                    </DrawerBody>
+                  </DrawerContent>
+                </Drawer>
+              </Box>
+
               <RouterLink to="/">
                 <Image
                   className="zoomLogoNavbar"
@@ -232,92 +246,97 @@ const Navbar = () => {
                   cursor="pointer"
                 />
               </RouterLink>
-            </Box>
-          </Flex>
-
-          <Flex
-            minWidth={"350px"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            direction={"row"}
-            className="navBarRightSide"
-            // bgColor={"blue"}
-          >
-            <Text fontWeight={"600"} fontSize="18px">
-              <RouterLink to="/host">
-                <Button
-                  className="navbar_hostButton"
-                  style={{
-                    color: "black",
-                    backgroundColor: "white",
-                    borderRadius: "30px",
-                    marginRight: "80px",
-                  }}
-                >
-                  Become a Host
-                </Button>
-              </RouterLink>
-            </Text>
-            <Text fontWeight={"600"} fontSize="18px" marginRight="80px">
-              <Link to="/zms">ZMS</Link>
-            </Text>
-            {/* <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Text
-                  fontWeight={"600"}
-                  fontSize="20px"
-                  className="userMenuNavbar"
-                >
-                  User Name
-                </Text>
-              </MenuButton>
-              <MenuList alignItems={"center"} backgroundColor="black">
-                <MenuItem
-                  className="menuLogoutBtn"
-                  color="white"
-                  backgroundColor="black"
-                  // onClick={handleLogout}
-                >
-                  Logout
-                </MenuItem>
-              </MenuList>
-            </Menu> */}
-
-            <Flex>
-              <Button
-                bg="black"
-                color="white"
-                fontSize={"16px"}
-                fontWeight="bold"
-                rounded="none"
-                marginRight="80px"
-                _hover={{ bgColor: "white", color: "black" }}
-              >
-                {name}
-              </Button>
-              <RouterLink to="/">
-                <Button
-                  colorScheme="#2B6CB0"
-                  variant="outline"
-                  _hover={{ bgColor: "white", color: "black" }}
-                  mr="20px"
-                  onClick={logoutUser}
-                >
-                  <b>Logout</b>
-                </Button>
-              </RouterLink>
             </Flex>
+            {/* ///////////////////////// */}
+            <Flex
+              minWidth={{ lg: "320px", md: "320px", sm: "10px" }}
+              alignItems="center"
+              gap="20px"
+              direction="row"
+              width="auto"
+              // bgColor={"blue"}
+            >
+              <Box>
+                <Text
+                  fontSize={{ lg: "md", md: "md", sm: "sm" }}
+                  fontWeight={"600"}
+                  visibility={{ base: "hidden", lg: "visible" }}
+                >
+                  <RouterLink to="/host">
+                    <Button
+                      size={{ lg: "md", md: "md", sm: "xs" }}
+                      className="navbar_hostButton"
+                      style={{
+                        color: "black",
+                        backgroundColor: "white",
+                        borderRadius: "20px",
+                      }}
+                    >
+                      Host
+                    </Button>
+                  </RouterLink>
+                </Text>
+              </Box>
+              <Box>
+                <Text
+                  fontSize="sm"
+                  fontWeight={"600"}
+                  visibility={{ base: "hidden", lg: "visible" }}
+                >
+                  <Link to="/zms">ZMS</Link>
+                </Text>
+              </Box>
+              <Box>
+                <Text fontSize="sm">
+                  <Button
+                    size={{ lg: "md", md: "md", sm: "xs" }}
+                    bg="black"
+                    color="white"
+                    fontSize={"16px"}
+                    fontWeight="bold"
+                    rounded="none"
+                    visibility={{
+                      base: "hidden",
+                      md: "visible",
+                      lg: "visible",
+                    }}
+                    _hover={{ bgColor: "white", color: "black" }}
+                  >
+                    {name}
+                  </Button>
+                </Text>
+              </Box>
+              <Box>
+                <Text fontSize="sm">
+                  <RouterLink to="/">
+                    <Button
+                      size={{ lg: "md", md: "md", sm: "xs" }}
+                      variant="outline"
+                      _hover={{ bgColor: "white", color: "black" }}
+                      visibility={{
+                        base: "hidden",
+                        md: "visible",
+                        lg: "visible",
+                      }}
+                      onClick={logoutUser}
+                    >
+                      <b>Logout</b>
+                    </Button>
+                  </RouterLink>
+                </Text>
+              </Box>
+            </Flex>
+            {/* ///////////////////////// */}
           </Flex>
-        </Flex>
+        </Box>
       ) : (
         <Box className={navbar.boxW} px={4}>
-          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <Flex
+            h={16}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            flexWrap={"wrap"}
+          >
             <Flex gap={"15px"} alignItems="center" direction="row">
               <Box>
                 <HamburgerIcon
@@ -409,7 +428,7 @@ const Navbar = () => {
               <RouterLink to="/">
                 <Image
                   className="zoomLogoNavbar"
-                  width="120px"
+                  width={{ lg: "120px", md: "100px", sm: "50px" }}
                   height="60px"
                   src={bumBlebee}
                   cursor="pointer"
@@ -417,82 +436,85 @@ const Navbar = () => {
               </RouterLink>
             </Flex>
 
-            <Flex
-              minWidth="350px"
-              alignItems="center"
-              justifyContent="space-between"
-              direction="row"
-              width="40%"
-            >
-              <Text
-                fontWeight={"600"}
-                fontSize="auto"
-                visibility={{ base: "hidden", lg: "visible" }}
-              >
-                <RouterLink to="/host">
-                  <Button
-                    className="navbar_hostButton"
-                    style={{
-                      color: "black",
-                      backgroundColor: "white",
-                      borderRadius: "30px",
-                    }}
-                  >
-                    Become a Host
-                  </Button>
-                </RouterLink>
-              </Text>
-              <Text
-                fontWeight={"600"}
-                fontSize="auto"
-                visibility={{ base: "hidden", lg: "visible" }}
-              >
-                <Link to="/zms">ZMS</Link>
-              </Text>
-              {/* <Menu className="userMenuNavbar">
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Text
-                    fontWeight={"600"}
-                    fontSize="auto"
-                    color="white"
-                    className="userMenuNavbar"
-                  >
-                    Login/SignUp
-                  </Text>
-                </MenuButton>
-                <MenuList
-                  alignItems={"center"}
-                  backgroundColor="white"
-                  color="black"
-                >
-                  <MenuItem onClick={handleLogin}>Login</MenuItem>
-                </MenuList>
-              </Menu> */}
-              <RouterLink to="/signup">
-                <Button
-                  variant="outline"
-                  _hover={{ bgColor: "white", color: "black" }}
-                >
-                  Sign up
-                </Button>
-              </RouterLink>
+            {/* //////////////////// */}
 
-              <RouterLink to="/login">
-                <Button
-                  marginRight={"40px"}
-                  variant="outline"
-                  _hover={{ bgColor: "white", color: "black" }}
+            <Flex
+              minWidth={{ lg: "320px", md: "320px", sm: "10px" }}
+              alignItems="center"
+              gap="20px"
+              direction="row"
+              width="auto"
+              // border="3px solid red"
+            >
+              <Box>
+                <Text
+                  fontSize={{ lg: "md", md: "md", sm: "sm" }}
+                  fontWeight={"600"}
+                  visibility={{ base: "hidden", lg: "visible" }}
                 >
-                  Log in
-                </Button>
-              </RouterLink>
+                  <RouterLink to="/host">
+                    <Button
+                      size={{ lg: "md", md: "md", sm: "xs" }}
+                      className="navbar_hostButton"
+                      style={{
+                        color: "black",
+                        backgroundColor: "white",
+                        borderRadius: "20px",
+                      }}
+                    >
+                      Host
+                    </Button>
+                  </RouterLink>
+                </Text>
+              </Box>
+              <Box>
+                <Text
+                  fontSize="sm"
+                  fontWeight={"600"}
+                  visibility={{ base: "hidden", lg: "visible" }}
+                >
+                  <Link to="/zms">ZMS</Link>
+                </Text>
+              </Box>
+              <Box>
+                <Text fontSize="sm">
+                  <RouterLink to="/signup">
+                    <Button
+                      size={{ lg: "md", md: "md", sm: "xs" }}
+                      variant="outline"
+                      _hover={{ bgColor: "white", color: "black" }}
+                      visibility={{
+                        base: "hidden",
+                        md: "visible",
+                        lg: "visible",
+                      }}
+                    >
+                      Sign up
+                    </Button>
+                  </RouterLink>
+                </Text>
+              </Box>
+              <Box>
+                <Text fontSize="sm">
+                  <RouterLink to="/login">
+                    <Button
+                      size={{ lg: "md", md: "md", sm: "xs" }}
+                      variant="outline"
+                      _hover={{ bgColor: "white", color: "black" }}
+                      visibility={{
+                        base: "hidden",
+                        md: "visible",
+                        lg: "visible",
+                      }}
+                    >
+                      Log in
+                    </Button>
+                  </RouterLink>
+                </Text>
+              </Box>
             </Flex>
+
+            {/* /////////////////// */}
           </Flex>
         </Box>
       )}

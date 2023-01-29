@@ -16,10 +16,15 @@ const Poster1 = () => {
           <img
             src="https://www.zoomcar.com/img/hero-banner-web.png"
             alt="d"
-            style={{ height: "100%", width: "100%" }}
+            // style={{ height: "100%", width: "100%" }}
+            height={{ lg: "100%", md: "80%", sm: "60%" }}
+            width="100%"
           />
         </Box>
-        <Box className={poster1.topcontent} >
+        <Box
+          className={poster1.topcontent}
+          visibility={{ base: "hidden", md: "visible", lg: "visible" }}
+        >
           <Heading
             className={poster1.topheading}
             fontSize={{ base: "20px", md: "40px", lg: "46px" }}
