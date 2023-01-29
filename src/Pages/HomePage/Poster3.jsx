@@ -8,7 +8,7 @@ const Poster3 = () => {
         <Box
           style={{
             width: "100%",
-            height: "540px",
+            height: "auto",
             // border: "2px solid red",
           }}
         >

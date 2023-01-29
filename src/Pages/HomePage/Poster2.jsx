@@ -8,14 +8,15 @@ const Poster2 = () => {
         <Box
           style={{
             width: "100%",
-            height: "680px",
+            height: "auto",
             // border: "2px solid red",
           }}
         >
           <img
             src="https://zoomcar-assets.zoomcar.com/images/original/97c77ce8da5affded5e3c4bde712044a90728781.png?1672044755"
             alt="d"
-            style={{ height: "100%", width: "100%" }}
+            height={{ lg: "100%", md: "80%", sm: "60%" }}
+            width="100%"
           />
         </Box>
         <Box className={poster2.topcontent}>

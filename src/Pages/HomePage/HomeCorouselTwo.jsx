@@ -70,6 +70,8 @@ const CorouselTwo = () => {
                   className={styles.ExploreDivImg2}
                   src={el.image}
                   alt="rty"
+                  height={{ lg: "100%", md: "80%", sm: "60%" }}
+                  width="100%"
                 />
               </div>
               <div
