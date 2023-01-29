@@ -23,9 +23,16 @@ import { GiTwoCoins } from "react-icons/gi";
 import { TbCoin } from "react-icons/tb";
 import { MdOutlineAccountBalanceWallet, MdVerifiedUser } from "react-icons/md";
 import { BiCar } from "react-icons/bi";
-import { RiLogoutBoxRLine } from "react-icons/ri";
+import { RiLogoutBoxLine, RiLogoutBoxRLine } from "react-icons/ri";
 
-import { FaUser, FaRegCopy, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import {
+  FaUser,
+  FaRegCopy,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaCross,
+  FaWindowClose,
+} from "react-icons/fa";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -92,10 +99,18 @@ const Navbar = () => {
                       bg="black"
                       color="white"
                     >
-                      <Flex alignItems={"center"} gap="20px">
-                        <FaUser size={"25px"} />
-                        <Box>
-                          <Text fontSize="18px">{name}</Text>
+                      <Flex
+                        alignItems={"center"}
+                        justifyContent="space-between"
+                      >
+                        <Flex alignItems={"center"} gap="20px">
+                          <FaUser size={"25px"} />
+                          <Box>
+                            <Text fontSize="18px">{name}</Text>
+                          </Box>
+                        </Flex>
+                        <Box alignItems={"center"} onClick={onClose}>
+                          <FaWindowClose size={"28px"} />
                         </Box>
                       </Flex>
                     </DrawerHeader>
@@ -357,9 +372,17 @@ const Navbar = () => {
                   <DrawerOverlay />
                   <DrawerContent bg={"white"} color={"gray.700"}>
                     <DrawerHeader borderBottomWidth="1px" bg={"gray.300"}>
-                      <Flex alignItems={"center"} gap="10px">
-                        <FaUser size={"18px"} />
-                        <Text fontSize="16px">Username</Text>
+                      <Flex
+                        alignItems={"center"}
+                        justifyContent="space-between"
+                      >
+                        <Flex alignItems={"center"} gap="10px">
+                          <FaUser size={"18px"} />
+                          <Text fontSize="16px">Username</Text>
+                        </Flex>
+                        <Box alignItems={"center"} onClick={onClose}>
+                          <FaWindowClose size={"28px"} />
+                        </Box>
                       </Flex>
                     </DrawerHeader>
                     <DrawerBody>
@@ -409,9 +432,8 @@ const Navbar = () => {
                       </Flex>
                       <hr color="gray"></hr>
                       <Flex alignItems={"center"} gap="10px" height={"50px"}>
-                        <RiLogoutBoxRLine size={"22"} />
+                        <RiLogoutBoxLine size={"22"} />
                         <RouterLink to="/login">
-                          {" "}
                           <Text
                             fontSize="16px"
                             cursor="pointer"
