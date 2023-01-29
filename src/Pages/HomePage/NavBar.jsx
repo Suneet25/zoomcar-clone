@@ -255,7 +255,6 @@ const Navbar = () => {
               direction="row"
               width="auto"
               // bgColor={"blue"}
-              
             >
               <Box>
                 <Text
