@@ -67,7 +67,7 @@ const Navbar = () => {
   return (
     <>
       {isAuth ? (
-        <Box className={navbar.boxW} px={4}>
+        <Box className={navbar.boxW} px={4} >
           <Flex
             h={16}
             alignItems={"center"}
