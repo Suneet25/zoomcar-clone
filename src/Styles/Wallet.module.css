@@ -1,0 +1,138 @@
+.walletDiv {
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+.walletDivMain {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#lock {
+  /* border: 1px solid red; */
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#lock p {
+  font-size: 25px;
+  margin-left: -1rem;
+  font-weight: bold;
+}
+
+#wallet {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#image {
+  border-radius: 10%;
+}
+.imagepaytm {
+  width: 60px;
+  height: 60px;
+  margin-right: 2rem;
+}
+
+#head2 {
+  width: 100%;
+  height: 2rem;
+  text-align: left;
+  font-weight: bold;
+}
+#head2 h2 {
+  font-weight: 600;
+  font-size: 20px;
+  /* padding-left: 1rem; */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1110px) {
+  #head2 h2 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  #lock p {
+    font-size: 25px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+  .imagepaytm {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+  }
+  #lock p {
+    font-size: 24px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #head2 h2 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  #lock p {
+    font-size: 20px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+  .imagepaytm {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+  }
+  #lock p {
+    font-size: 22px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  #head2 h2 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  #lock p {
+    font-size: 20px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+  .imagepaytm {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+  }
+  #lock p {
+    font-size: 20px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #head2 h2 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  #lock p {
+    font-size: 18px;
+    margin-left: -1rem;
+    font-weight: bold;
+  }
+}

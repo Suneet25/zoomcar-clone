@@ -1,0 +1,66 @@
+.bankingDiv {
+  margin: auto;
+  width: 70%;
+  display: block;
+  
+}
+
+.optionsDiv {
+  width: 100%;
+}
+.optionsDiv > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  margin: 0.5rem;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.image {
+  width: 20%;
+  border-radius: 100%;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.head2 {
+  /* border: 1px solid green; */
+  width: 70%;
+  text-align: left;
+  margin-left: 10%;
+}
+
+/* applying mediaqueries */
+@media only screen and (min-width: 769px) and (max-width: 1110px) {
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .bankingDiv {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  .optionsDiv > div {
+    display: block;
+  }
+  .bankingDiv {
+    margin: auto;
+    width: 70%;
+    display: block;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* border: 5px solid burlywood; */
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .bankingDiv {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .bankingDiv {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+}

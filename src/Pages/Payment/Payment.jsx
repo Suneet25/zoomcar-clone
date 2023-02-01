@@ -1,28 +1,13 @@
 import React, { useEffect, useState } from "react";
-
-
 import PAYMENT from "../../Styles/Payment.module.css";
-import {
-  Avatar,
-  Box,
-  Card,
-  CardHeader,
-  Flex,
-  Heading,
- 
-} from "@chakra-ui/react";
+import { Avatar, Box, Card, CardHeader, Flex, Heading } from "@chakra-ui/react";
 import Active from "./Active";
 import Wallet from "./Wallet";
 import Banking from "./Banking";
 import Credit from "./Credit";
 
-
-
-
 let DataObj = JSON.parse(localStorage.getItem("userdata"));
-console.log(DataObj)
-
-
+console.log(DataObj);
 
 const Payment = (data) => {
   const [pageTrue, setpageTrue] = useState("upi");
@@ -45,8 +30,8 @@ const Payment = (data) => {
       <div id="first">
         <div>
           <h1 className={PAYMENT.tagH1}>PAYMENT OPTIONS</h1>
-
           <Card
+            // border={'1px solid red'}
             maxW="md"
             bg={"white"}
             color={"black"}
@@ -59,11 +44,17 @@ const Payment = (data) => {
                 <Flex flex="1" gap="4" alignItems="center">
                   <Avatar
                     name="UPI"
+                    className={PAYMENT.Avatarmain}
                     src="https://zoomcar-assets.zoomcar.com/images/original/9fcb8335a89265849f23225858489f2a9ce8e121.png?1584453574"
                   />
 
                   <Box>
-                    <Heading size="sm">UPI</Heading>
+                    <Heading
+                      className={PAYMENT.Headings}
+                      fontSize={["sm", "md", "lg"]}
+                    >
+                      UPI
+                    </Heading>
                     {/* <Text class="text">Google Pay, PhonePe, UPI</Text> */}
                   </Box>
                 </Flex>
@@ -83,12 +74,18 @@ const Payment = (data) => {
               <Flex spacing="4">
                 <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
                   <Avatar
+                    className={PAYMENT.Avatarmain}
                     name="UPI"
                     src="https://zoomcar-assets.zoomcar.com/images/original/97f051d76793fffe5ab182ffa58b8eb47c5ba0cf.png?1584453494"
                   />
 
                   <Box>
-                    <Heading size="sm">Credit/ Debit/ ATM Card</Heading>
+                    <Heading
+                      className={PAYMENT.Headings}
+                      fontSize={["sm", "md", "lg"]}
+                    >
+                      Credit/ Debit/ ATM Card
+                    </Heading>
                     {/* <Text> major cards are supported</Text> */}
                   </Box>
                 </Flex>
@@ -108,12 +105,18 @@ const Payment = (data) => {
               <Flex spacing="4">
                 <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
                   <Avatar
+                    className={PAYMENT.Avatarmain}
                     name="Mobile Wallet"
                     src="https://zoomcar-assets.zoomcar.com/images/original/1317404625e385185d23ea43a0c34569d6432d09.png?1632130014"
                   />
 
                   <Box>
-                    <Heading size="sm">Mobile Wallet</Heading>
+                    <Heading
+                      className={PAYMENT.Headings}
+                      fontSize={["sm", "md", "lg"]}
+                    >
+                      Mobile Wallet
+                    </Heading>
                     {/* <Text>All major wallets are supported</Text> */}
                   </Box>
                 </Flex>
@@ -134,12 +137,17 @@ const Payment = (data) => {
                 <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
                   <Avatar
                     name="Net Banking"
+                    className={PAYMENT.Avatarmain}
                     src="https://zoomcar-assets.zoomcar.com/images/original/4dd051886e5403aafb9725b7d2ab42c80f9b1df6.png?1584453529"
                   />
 
                   <Box>
-                    <Heading size="sm">Net Banking</Heading>
-                    {/* <Text>All major banks are supported</Text> */}
+                    <Heading
+                      className={PAYMENT.Headings}
+                      fontSize={["sm", "md", "lg"]}
+                    >
+                      Net Banking
+                    </Heading>
                   </Box>
                 </Flex>
               </Flex>
@@ -149,27 +157,18 @@ const Payment = (data) => {
 
         {/* second div starts here */}
 
-        {pageTrue === "upi" ? (
-          <Active />
-        ) : pageTrue === "card" ? (
-          <Credit />
-        ) : pageTrue === "netbank" ? (
-          <Banking />
-        ) : pageTrue === "wallet" ? (
-          <Wallet />
-        ) : null}
-
-
-       
-      </div>
-
-      {/* <div className={PAYMENT.SecondSection}>
-        <h1 className={PAYMENT.tagH1}>car details box</h1>
         <div>
-          <h1 className={PAYMENT.SecondH1}>{DataObj.title}</h1>
-          <img src={DataObj.image} alt="" />
+          {pageTrue === "upi" ? (
+            <Active />
+          ) : pageTrue === "card" ? (
+            <Credit />
+          ) : pageTrue === "netbank" ? (
+            <Banking />
+          ) : pageTrue === "wallet" ? (
+            <Wallet />
+          ) : null}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
