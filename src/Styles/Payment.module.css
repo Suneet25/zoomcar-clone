@@ -1,21 +1,23 @@
 .payDiv {
-  height: 600px;
+  height: auto;
   width: 98%;
   margin: auto;
   display: flex;
   justify-content: space-between;
+  /* border: 1px solid red; */
 }
 
 .payDiv > div:nth-child(1) {
-  width: 70%;
+  width: 80%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   margin: auto;
-  height: 500px;
+  height: auto;
   border-radius: 10px;
   display: flex;
   cursor: pointer;
+  /* border: 1px solid blue; */
 }
 
 .payDiv > div:nth-child(1) > div:nth-child(1) {
@@ -27,12 +29,12 @@
 .payDiv > div:nth-child(1) > div:nth-child(2) {
   width: 65%;
   padding: 0 1rem;
-  /* border: 5px solid pink; */
+  /* border: 1px solid pink; */
 }
 
 .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
   width: 100%;
-  /* border: 1px solid red; */
+  /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -40,7 +42,7 @@
 
 .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
   width: 100%;
-  /* border: 1px solid green; */
+  /* border: 1px solid orange; */
   margin-top: 20px;
   display: flex;
 }
@@ -88,4 +90,145 @@ h2 {
 
 .card:hover {
   background-color: rgb(194, 194, 194);
+}
+.Avatarmain {
+  width: 22px;
+  height: 25px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+  .payDiv > div:nth-child(1) {
+    display: block;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(1) {
+    width: 90%;
+    border: 1px solid black;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(2) {
+    width: 90%;
+    padding: 0 1rem;
+    border: 1px solid pink;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .payDiv > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(2) {
+    width: 90%;
+    padding: 0 1rem;
+    /* border: 1px solid pink; */
+  }
+  .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+    /* border: 1px solid orange; */
+    margin-top: 20px;
+    display: block;
+    margin-top: 1rem;
+  }
+  .Headings {
+    font-size: 18px;
+  }
+  .Avatarmain {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .payDiv > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(2) {
+    width: 90%;
+    padding: 0 1rem;
+  }
+  .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    margin-top: 1rem;
+  }
+  .Headings {
+    font-size: 15px;
+  }
+  .Avatarmain {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 319px) {
+  .payDiv > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .payDiv > div:nth-child(1) > div:nth-child(2) {
+    width: 90%;
+    padding: 0 1rem;
+  }
+  .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+    /* border: 1px solid orange; */
+    margin-top: 20px;
+    display: block;
+    margin-top: 1rem;
+  }
+  .Headings {
+    font-size: 14px;
+  }
+  .Avatarmain {
+    width: 22px;
+    height: 25px;
+  }
+}
+
+/* Test */
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+@media only screen and (min-width: 0px) and (max-width: 319px) {
 }

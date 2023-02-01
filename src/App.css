@@ -14,9 +14,8 @@
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
-
-.creditButton{
-  padding:10px 40px;
+.creditButton {
+  padding: 10px 40px;
   margin-top: 1rem;
   font-size: 20px;
   font-weight: bold;
@@ -24,8 +23,160 @@
   border-radius: 10px;
 }
 
-.creditButton:hover{
+.creditButton:hover {
   transition: 0.3s;
-  background-color: #10A310;
+  background-color: #10a310;
   color: white;
+}
+
+.CreditMaindiv {
+  background-color: white;
+  color: black;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.CreditMaindivSecond {
+  display: block;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.BankingParent {
+  background-color: white;
+  display: block;
+}
+
+.CreditSecondH1 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.CreditSecondDiv {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 90%;
+  margin-top: 1rem;
+}
+.CreditFirstInputBox {
+  border: 1px solid grey;
+  height: 60px;
+  width: 90%;
+  padding: 10px;
+}
+
+.CreditFirstInputBox2 {
+  border: 1px solid grey;
+  height: 60px;
+  width: 80%;
+  padding: 10px;
+}
+
+.CreditFirstInputBox3 {
+  border: 1px solid grey;
+  height: 60px;
+  width: 80%;
+  padding: 10px;
+}
+@media only screen and (min-width: 769px) and (max-width: 1080px) {
+  .CreditFirstInputBox {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+  }
+  .CreditSecondDiv {
+    display: block;
+    width: 100%;
+  }
+  .CreditFirstInputBox2 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .CreditFirstInputBox3 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .CreditFirstInputBox {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+  }
+  .CreditSecondDiv {
+    display: block;
+    width: 100%;
+  }
+  .CreditFirstInputBox2 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .CreditFirstInputBox3 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .CreditFirstInputBox {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+  }
+  .CreditSecondDiv {
+    display: block;
+    width: 100%;
+  }
+  .CreditFirstInputBox2 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .CreditFirstInputBox3 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 319px) {
+  .CreditFirstInputBox {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+  }
+  .CreditSecondDiv {
+    display: block;
+    width: 100%;
+  }
+  .CreditFirstInputBox2 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .CreditFirstInputBox3 {
+    border: 1px solid grey;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+  }
 }
