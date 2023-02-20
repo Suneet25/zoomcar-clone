@@ -30,7 +30,7 @@ const Picklocation = () => {
       .then((resData) => {
         setCurrLoc(resData.name);
         setlocationset(resData.name);
-        // console.log("resData.name",resData.name)
+    
         
       })
       .catch((e) => console.log(e));

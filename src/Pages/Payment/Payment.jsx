@@ -1,45 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-
 import PAYMENT from "../../Styles/Payment.module.css";
-import {
-  Avatar,
-  Box,
-  Card,
-  CardHeader,
-  Flex,
-  Heading,
- 
-} from "@chakra-ui/react";
+import { Avatar, Box, Card, CardHeader, Flex, Heading } from "@chakra-ui/react";
 import Active from "./Active";
 import Wallet from "./Wallet";
 import Banking from "./Banking";
 import Credit from "./Credit";
 
-
-
-
 let DataObj = JSON.parse(localStorage.getItem("userdata"));
-console.log(DataObj)
-
-
 
 const Payment = (data) => {
   const [pageTrue, setpageTrue] = useState("upi");
 
-  // console.log("DataObj", DataObj);
-  console.log("data", data);
   const handleChange = (value) => {
     setpageTrue(value);
   };
 
-  useEffect(() => {
-    window.addEventListener("load", (event) => {
-      console.log("page is fully loaded");
-    });
-  }, []);
-
-  console.log(data.price);
   return (
     <div className={PAYMENT.payDiv}>
       <div id="first">
@@ -64,7 +40,6 @@ const Payment = (data) => {
 
                   <Box>
                     <Heading size="sm">UPI</Heading>
-                    {/* <Text class="text">Google Pay, PhonePe, UPI</Text> */}
                   </Box>
                 </Flex>
               </Flex>
@@ -89,7 +64,7 @@ const Payment = (data) => {
 
                   <Box>
                     <Heading size="sm">Credit/ Debit/ ATM Card</Heading>
-                    {/* <Text> major cards are supported</Text> */}
+                  
                   </Box>
                 </Flex>
               </Flex>
@@ -114,7 +89,7 @@ const Payment = (data) => {
 
                   <Box>
                     <Heading size="sm">Mobile Wallet</Heading>
-                    {/* <Text>All major wallets are supported</Text> */}
+                   
                   </Box>
                 </Flex>
               </Flex>
@@ -139,7 +114,7 @@ const Payment = (data) => {
 
                   <Box>
                     <Heading size="sm">Net Banking</Heading>
-                    {/* <Text>All major banks are supported</Text> */}
+                 
                   </Box>
                 </Flex>
               </Flex>
@@ -158,18 +133,8 @@ const Payment = (data) => {
         ) : pageTrue === "wallet" ? (
           <Wallet />
         ) : null}
-
-
-       
       </div>
 
-      {/* <div className={PAYMENT.SecondSection}>
-        <h1 className={PAYMENT.tagH1}>car details box</h1>
-        <div>
-          <h1 className={PAYMENT.SecondH1}>{DataObj.title}</h1>
-          <img src={DataObj.image} alt="" />
-        </div>
-      </div> */}
     </div>
   );
 };

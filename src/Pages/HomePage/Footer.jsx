@@ -39,94 +39,89 @@ const Footer = () => {
         <Box className={foot.FooterContent}>
           <Box>
             <Text fontSize="sm">Banagalore</Text>
-            <br />
+
             <Text fontSize="sm">Chennai</Text>
-            <br />
+
             <Text fontSize="sm">Hyderabad</Text>
-            <br />
+
             <Text fontSize="sm">Ahemadabad</Text>
-            <br />
+
             <Text fontSize="sm">Mangalore</Text>
-            <br />
+
             <Text fontSize="sm">Bhopal</Text>
-            <br />
+
             <Text fontSize="sm">Madurai</Text>
-            <br />
+
             <Text fontSize="sm">Vadodara</Text>
-            <br />
-            <br />
-            <Heading as="h4" size="md">
+
+            <Heading marginTop="20px" as="h4" size="md">
               INDONESIA
             </Heading>
 
-            <br />
             <Text fontSize="sm">Jakarta</Text>
           </Box>
           <Box>
             <Text fontSize="sm">Bangalore</Text>
-            <br />
+
             <Text fontSize="sm">Chennai</Text>
-            <br />
+
             <Text fontSize="sm">Hyderabad</Text>
-            <br />
+
             <Text fontSize="sm">Ahemadabad</Text>
-            <br />
+
             <Text fontSize="sm">Mangalore</Text>
-            <br />
+
             <Text fontSize="sm">Bhopal</Text>
-            <br />
+
             <Text fontSize="sm">Madurai</Text>
-            <br />
+
             <Text fontSize="sm">Vadodara</Text>
-            <br />
-            <br />
-            <Heading as="h4" size="md">
+
+            <Heading marginTop="20px" as="h4" size="md">
               VIETNAM
             </Heading>
-            <br />
+
             <Text fontSize="sm">Ho Chi Minh</Text>
           </Box>
           <Box>
             <Text fontSize="sm">Banagalore</Text>
-            <br />
+
             <Text fontSize="sm">Chennai</Text>
-            <br />
+
             <Text fontSize="sm">Hyderabad</Text>
-            <br />
+
             <Text fontSize="sm">Ahemadabad</Text>
-            <br />
+
             <Text fontSize="sm">Mangalore</Text>
-            <br />
+
             <Text fontSize="sm">Bhopal</Text>
-            <br />
+
             <Text fontSize="sm">Madurai</Text>
-            <br />
+
             <Text fontSize="sm">Vadodara</Text>
-            <br />
-            <br />
-            <Heading as="h4" size="md">
+
+            <Heading as="h4" size="md" marginTop="20px">
               EGYPT
             </Heading>
-            <br />
+
             <Text fontSize="sm">Cairo</Text>
           </Box>
           <Box>
             <Text fontSize="sm">Banagalore</Text>
-            <br />
+
             <Text fontSize="sm">Chennai</Text>
-            <br />
+
             <Text fontSize="sm">Hyderabad</Text>
-            <br />
+
             <Text fontSize="sm">Ahemadabad</Text>
-            <br />
+
             <Text fontSize="sm">Mangalore</Text>
-            <br />
+
             <Text fontSize="sm">Bhopal</Text>
-            <br />
+
             <Text fontSize="sm">Madurai</Text>
-            <br />
+
             <Text fontSize="sm">Vadodara</Text>
-            <br />
           </Box>
         </Box>
 

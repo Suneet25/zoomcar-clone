@@ -10,6 +10,7 @@ import Hosts from "../Pages/HostPage/HostPage";
 import DateTime from "../Pages/HomePage/DateAndTime";
 import Picklocation from "../Pages/PickupLocation/Pickuplocation";
 import Success from "../Pages/Payment/Success";
+import ZMC from "../Pages/ZMC";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -23,6 +24,7 @@ const AllRoutes = () => {
       <Route path="/datetime" element={<DateTime />} />
       <Route path="/pickup" element={<Picklocation />} />
       <Route path="/success" element={<Success />} />
+      <Route path="/zms" element={<ZMC />} />
     </Routes>
   );
 };

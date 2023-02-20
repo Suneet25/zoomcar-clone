@@ -15,13 +15,11 @@ import ACTIVE from "../../Styles/Active.module.css";
 const Active = () => {
   return (
     <div className={ACTIVE.activeDiv}>
-      {/* <div > */}
-
-      {/* lock part */}
+    
       <div>
         <div>
           <h1 className={ACTIVE.h1tag}>Select a UPI App</h1>
-          {/* <p> Amount:₹{"500"}</p> */}
+        
         </div>
         <div>
           <img
@@ -135,7 +133,7 @@ const Active = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
+   
     </div>
   );
 };

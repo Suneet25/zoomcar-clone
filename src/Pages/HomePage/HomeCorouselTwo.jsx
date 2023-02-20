@@ -3,43 +3,7 @@ import Carousel from "react-multi-carousel";
 import styles from "../../Styles/HomePage.module.css";
 import "react-multi-carousel/lib/styles.css";
 import { Heading, Box } from "@chakra-ui/react";
-let imageData = [
-  {
-    id: 1,
-    image:
-      "https://zoomcar-assets.zoomcar.com/images/original/d09afb8f29763525cd9823221791be7188b31460.png?1672044204",
-
-    title: "Enjoy Unlimited Kilometers",
-  },
-  {
-    id: 2,
-    image:
-      "https://zoomcar-assets.zoomcar.com/images/original/92ede006e6e6bf849d2fe715761e3e6833aad5ec.png?1671712552",
-
-    title: "Zero Security Deposit",
-  },
-  {
-    id: 3,
-    image:
-      "https://zoomcar-assets.zoomcar.com/images/original/ac74c0e87023949496768b9557c52936bc35090b.png?1672044356",
-
-    title: "100% Free Cancellation ",
-  },
-  {
-    id: 4,
-    image:
-      "https://zoomcar-assets.zoomcar.com/images/original/5d9694e98e7716aab66ea6e0a0f6b7bd7a4958c8.png?1672044544",
-
-    title: "Zero Toll Charges",
-  },
-  {
-    id: 5,
-    image:
-      "https://zoomcar-assets.zoomcar.com/images/original/bb32fcf3eb9047ee20809f2dbf6e88ae739fb4d9.png?1672044584",
-
-    title: "Reshedule For Free",
-  },
-];
+import { CorouselTwoData } from "../../data/CorouselsData";
 
 const CorouselTwo = () => {
   const responsive = {
@@ -62,7 +26,7 @@ const CorouselTwo = () => {
   return (
     <div style={{ display: "grid" }}>
       <Carousel responsive={responsive} transitionDuration={1000}>
-        {imageData.map((el) => {
+        {CorouselTwoData.map((el) => {
           return (
             <div className={styles.ExploreDiv2} key={el.id}>
               <div style={{ position: "relative", paddingTop: "50px" }}>
