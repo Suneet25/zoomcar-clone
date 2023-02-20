@@ -10,21 +10,36 @@ import Hosts from "../Pages/HostPage/HostPage";
 import DateTime from "../Pages/HomePage/DateAndTime";
 import Picklocation from "../Pages/PickupLocation/Pickuplocation";
 import Success from "../Pages/Payment/Success";
-import ZMC from "../Pages/ZMC";
+import PrivateRoute from "./PrivateRoute";
+import ZMS from "../Pages/ZMS";
 const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/cars" element={<CarsPage />} />
-      <Route path="/cars/:id" element={<SingleCarsPage />} />
-      <Route path="/payment" element={<Payment />} />
+      <Route
+        path="/cars/:id"
+        element={
+          <PrivateRoute>
+            <SingleCarsPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/payment"
+        element={
+          <PrivateRoute>
+            <Payment />
+          </PrivateRoute>
+        }
+      />
       <Route path="/login" element={<Loginpage />} />
       <Route path="/signup" element={<SignupCard />} />
       <Route path="/host" element={<Hosts />} />
       <Route path="/datetime" element={<DateTime />} />
       <Route path="/pickup" element={<Picklocation />} />
       <Route path="/success" element={<Success />} />
-      <Route path="/zms" element={<ZMC />} />
+      <Route path="/zms" element={<ZMS />} />
     </Routes>
   );
 };
