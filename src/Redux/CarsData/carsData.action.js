@@ -11,7 +11,7 @@ import {
 export const getCarsData = () => (dispatch) => {
   dispatch({ type: CARS_LOADING });
   return axios
-    .get("https://backendjson-production.up.railway.app/api/cars")
+    .get("https://ill-teal-bluefish-vest.cyclic.app/api/cars")
     .then((response) =>
       dispatch({ type: CARS_SUCCESS, payload: response.data })
     )
@@ -21,7 +21,7 @@ export const getCarsData = () => (dispatch) => {
 export const getSingleCarsData = (id) => (dispatch) => {
   dispatch({ type: SINGLE_CARS_LOADING });
   return axios
-    .get(`https://backendjson-production.up.railway.app/api/cars/${id}`)
+    .get(`https://ill-teal-bluefish-vest.cyclic.app/api/cars/${id}`)
     .then((response) =>
       dispatch({ type: SINGLE_CARS_SUCCESS, payload: response.data })
     )
