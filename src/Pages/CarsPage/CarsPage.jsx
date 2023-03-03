@@ -17,9 +17,7 @@ const CarsPage = () => {
   const [CarType, setCarType] = useState("");
   const [CarSeat, setCarSeat] = useState("");
   const { data } = useSelector((store) => store.CarsReducer);
-  /* So basically here i'm getting data form store and setting into setCarsAPIData(data)
-    and passing CarsAPIData when it change useEffect re-rendor and it work until data length...
-    */
+  
 
   const handleReset = () => {
     setCarsData(data);
@@ -30,7 +28,7 @@ const CarsPage = () => {
       return a.price - b.price;
     });
     setCarsData(sortfunc);
-    // console.log(" low to high", sortfunc);
+   
   };
 
   const handleHightoLow = () => {

@@ -11,6 +11,7 @@ import DateTime from "../Pages/HomePage/DateAndTime";
 import Picklocation from "../Pages/PickupLocation/Pickuplocation";
 import Success from "../Pages/Payment/Success";
 import PrivateRoute from "./PrivateRoute";
+import ZMS from "../Pages/ZMS";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -38,6 +39,7 @@ const AllRoutes = () => {
       <Route path="/datetime" element={<DateTime />} />
       <Route path="/pickup" element={<Picklocation />} />
       <Route path="/success" element={<Success />} />
+      <Route path="/zms" element={<ZMS />} />
     </Routes>
   );
 };

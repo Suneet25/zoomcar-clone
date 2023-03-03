@@ -7,14 +7,14 @@
   margin: auto;
   justify-content: space-between;
   margin-bottom: 1rem;
-  /* column-gap: 0.5rem; */
+ 
 }
 
 .ExploreDiv2 {
   display: grid;
   justify-content: center;
   margin-bottom: 1rem;
-  /* column-gap: 0.5rem; */
+
 }
 
 .ExploreDivImg {
@@ -34,11 +34,6 @@
 }
 
 
-/* poster1 */
-
-/* .maincontainer{
-   border: 3px solid blue
-} */
 
 .pickup{
   position: absolute;
@@ -53,7 +48,7 @@
    
 }
 .topcontent{
-  /* border:2px solid red */
+
     position: absolute;
     top: 5%;
     left: 13%;
@@ -179,9 +174,10 @@
 }
 .pickup{
   position: absolute;
-  top: 33%;
-  left: 6%;
-  /* border: 3px solid red */
+  top: 8%;
+  left: 48%;
+  width:10px;
+
 }
 }
 

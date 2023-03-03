@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PAYMENT from "../../Styles/Payment.module.css";
 import { Avatar, Box, Card, CardHeader, Flex, Heading } from "@chakra-ui/react";
 import Active from "./Active";
@@ -7,24 +7,14 @@ import Banking from "./Banking";
 import Credit from "./Credit";
 
 let DataObj = JSON.parse(localStorage.getItem("userdata"));
-console.log(DataObj);
 
 const Payment = (data) => {
   const [pageTrue, setpageTrue] = useState("upi");
 
-  // console.log("DataObj", DataObj);
-  console.log("data", data);
   const handleChange = (value) => {
     setpageTrue(value);
   };
 
-  useEffect(() => {
-    window.addEventListener("load", (event) => {
-      console.log("page is fully loaded");
-    });
-  }, []);
-
-  console.log(data.price);
   return (
     <div className={PAYMENT.payDiv}>
       <div id="first">

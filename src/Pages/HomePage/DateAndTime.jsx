@@ -19,14 +19,14 @@ const DateTime = () => {
   const handleSelect = (date) => {
     let startDate = String(state[0].startDate);
     let endDate = String(state[0].endDate);
-    let stDate = "";
-    let edDate = "";
+    let startingDate = "";
+    let endingdDate = "";
     for (let i = 0; i < 16; i++) {
-      stDate += startDate[i];
-      edDate += endDate[i];
+      startingDate += startDate[i];
+      endingdDate += endDate[i];
     }
-    localStorage.setItem("firstDay", JSON.stringify(stDate));
-    localStorage.setItem("lastDay", JSON.stringify(edDate));
+    localStorage.setItem("firstDay", JSON.stringify(startingDate));
+    localStorage.setItem("lastDay", JSON.stringify(endingdDate));
 
     navigate("/");
   };

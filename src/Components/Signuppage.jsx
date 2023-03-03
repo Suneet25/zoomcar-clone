@@ -37,12 +37,15 @@ export default function SignupCard() {
         }),
       });
       let data = await res.json();
-      console.log(data);
+
       setload(false);
       alert("Signup Successfull!");
       navigate("/login");
     } catch (error) {
       setload(false);
+      setname("");
+      setemail("");
+      setPassword("");
       console.log(error);
     }
 
@@ -57,15 +60,7 @@ export default function SignupCard() {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Stack
-        // border={"1px solid red"}
-        spacing={6}
-        mx={"auto"}
-        // maxW={"450px"}
-        // py={12}
-        px={6}
-        className={"signup_main"}
-      >
+      <Stack spacing={6} mx={"auto"} px={6} className={"signup_main"}>
         <Image src={Logo} alt="logo" marginBottom={"20px"} />
         <Stack align={"center"}>
           <Heading
@@ -78,14 +73,7 @@ export default function SignupCard() {
           </Heading>
         </Stack>
 
-        <Box
-        //   rounded={"lg"}
-        //   bg={useColorModeValue("white", "gray.700")}
-        //   boxShadow={"lg"}
-        //   p={8}
-        //   width={"500px"}
-        //   height={"auto"}
-        >
+        <Box>
           <Stack spacing={4} mt={"-10px"}>
             <Box>
               <FormControl id="firstName" isRequired>
