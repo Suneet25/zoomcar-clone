@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import homeBgImage from "../../Assets/banner_roundtrip.png";
 import { FaCircle } from "react-icons/fa";
 import { VscCalendar } from "react-icons/vsc";
 import { BsArrowRight } from "react-icons/bs";

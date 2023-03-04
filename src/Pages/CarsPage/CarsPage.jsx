@@ -51,13 +51,13 @@ const CarsPage = () => {
   const handleFilterCarTypes = (e) => {
     const CarTypeData = data.filter((ele) => ele.type === e.target.value);
     setCarsData(CarTypeData);
-    // console.log('CarTypeData:', CarTypeData)
+  
   };
 
   const handleCarSeats = (e) => {
     const CarSeatData = data.filter((ele) => ele.seats === e.target.value);
     setCarsData(CarSeatData);
-    // console.log("CarSeatData", CarSeatData);
+ 
   };
 
   const handleCarTransmission = (e) => {
@@ -65,13 +65,13 @@ const CarsPage = () => {
       (ele) => ele.transmission === e.target.value
     );
     setCarsData(CarTransmissionData);
-    // console.log("CarTransmissionData", CarTransmissionData);
+   
   };
 
   const handleCarFuel = (e) => {
     const CarFuel = data.filter((ele) => ele.fueltype === e.target.value);
     setCarsData(CarFuel);
-    // console.log("CarFuel", CarFuel);
+   
   };
 
   useEffect(() => {
@@ -115,7 +115,6 @@ const CarsPage = () => {
             </div>
           </div>
 
-          {/* Car Type Section */}
           <br />
           <p>Car type</p>
           <div className={cars.ButtonFirstGrid}>
@@ -133,7 +132,7 @@ const CarsPage = () => {
             </button>
           </div>
 
-          {/* Car Seats */}
+     
           <br />
           <p>Seats Type</p>
           <div className={cars.ButtonFirstGrid}>
@@ -145,7 +144,7 @@ const CarsPage = () => {
             </button>
           </div>
 
-          {/* Cars transmission */}
+       
           <br />
           <p>Transmission</p>
           <div className={cars.ButtonFirstGrid}>
@@ -159,7 +158,7 @@ const CarsPage = () => {
             </button>
           </div>
 
-          {/* Cars Fuel */}
+      
           <br />
           <p>Fuel</p>
           <div className={cars.ButtonFirstGrid}>

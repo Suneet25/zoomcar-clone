@@ -21,7 +21,7 @@ const Payment = (data) => {
         <div>
           <h1 className={PAYMENT.tagH1}>PAYMENT OPTIONS</h1>
           <Card
-            // border={'1px solid red'}
+          
             maxW="md"
             bg={"white"}
             color={"black"}
@@ -45,7 +45,7 @@ const Payment = (data) => {
                     >
                       UPI
                     </Heading>
-                    {/* <Text class="text">Google Pay, PhonePe, UPI</Text> */}
+                  
                   </Box>
                 </Flex>
               </Flex>
@@ -76,7 +76,7 @@ const Payment = (data) => {
                     >
                       Credit/ Debit/ ATM Card
                     </Heading>
-                    {/* <Text> major cards are supported</Text> */}
+             
                   </Box>
                 </Flex>
               </Flex>
@@ -107,7 +107,7 @@ const Payment = (data) => {
                     >
                       Mobile Wallet
                     </Heading>
-                    {/* <Text>All major wallets are supported</Text> */}
+               
                   </Box>
                 </Flex>
               </Flex>
@@ -145,7 +145,7 @@ const Payment = (data) => {
           </Card>
         </div>
 
-        {/* second div starts here */}
+    
 
         <div>
           {pageTrue === "upi" ? (

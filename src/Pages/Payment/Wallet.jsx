@@ -18,7 +18,7 @@ const Wallet = () => {
             </div>
           </div>
 
-          {/* wallet */}
+        
           <div id={WALLET.wallet}>
             <div id={WALLET.image}>
               <img

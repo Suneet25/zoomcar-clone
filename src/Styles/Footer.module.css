@@ -3,8 +3,7 @@
         background-color : #666;
         width : 100%;
         height:auto;
-        /* border: 2px solid blue; */
-      /* border:2px solid yellow */
+    
 }
 
 
@@ -15,17 +14,17 @@
     column-gap: 30px;
     row-gap:  30px;
     padding-left: 60px;
-    /* border: 2px solid yellow */
+ 
 }
 
 .QRcode {
     padding-left: 60px;
-    /* border: 2px solid black; */
+  
     display: grid;
     grid-template-columns:repeat(2 ,1fr);
     margin-top: 30px;
     justify-content: space-between;
-    /* border:2px solid green */
+ 
 }
 
 .socials{
@@ -47,7 +46,7 @@
         background-color : #666;
         width : 100%;
         height:auto;
-        /* border: 2px solid blue; */
+
       
 }
     .FooterContent {
@@ -57,11 +56,11 @@
         column-gap: 30px;
         row-gap:  30px;
         padding-left: 60px;
-        /* border: 2px solid yellow */
+   
     }
     .QRcode {
         padding-left: 60px;
-        /* border: 2px solid black; */
+  
         display: grid;
         grid-template-columns:repeat(2 ,1fr);
         
@@ -75,7 +74,7 @@
         background-color : #666;
         width : 100%;
         height:auto;
-        /* border: 2px solid blue; */
+    
       
 }
     .FooterContent {
@@ -85,11 +84,11 @@
         column-gap: 30px;
         row-gap:  30px;
         padding-left: 60px;
-        /* border: 2px solid yellow */
+     
     }
     .QRcode {
         padding-left: 60px;
-        /* border: 2px solid black; */
+   
         display: grid;
         grid-template-columns:repeat(1 ,1fr);
         margin-top: 30px;
@@ -103,7 +102,7 @@
         background-color : #666;
         width : 100%;
         height:auto;
-        /* border: 2px solid blue; */
+
       
 }
     .FooterContent {
@@ -113,11 +112,11 @@
         column-gap: 30px;
         row-gap:  40px;
         padding-left: 60px;
-        /* border: 2px solid yellow */
+ 
     }
     .QRcode {
         padding-left: 60px;
-        /* border: 2px solid black; */
+    
         display: grid;
         grid-template-columns:repeat(1 ,1fr);
         margin-top: 30px;
@@ -132,7 +131,7 @@
         background-color : #666;
         width : 100%;
         height:auto;
-        /* border: 2px solid blue; */
+
       
 }
     .FooterContent {
@@ -142,11 +141,11 @@
         column-gap: 10px;
         
         padding-left: 60px;
-        /* border: 2px solid yellow */
+    
     }
     .QRcode {
         padding-left: 60px;
-        /* border: 2px solid black; */
+       
         display: grid;
         grid-template-columns:repeat(1 ,1fr);
         margin-top: 30px;

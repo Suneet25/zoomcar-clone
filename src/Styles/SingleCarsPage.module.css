@@ -194,7 +194,7 @@
   user-select: none;
 }
 
-/* Hide the browser's default radio button */
+
 .container input {
   position: absolute;
   opacity: 0;
@@ -203,7 +203,7 @@
   width: 0;
 }
 
-/* Create a custom radio button */
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -215,29 +215,29 @@
   border: 1px solid black;
 }
 
-/* On mouse-over, add a grey background color */
+
 .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the radio button is checked, add a blue background */
+
 .container input:checked ~ .checkmark {
   background-color: #10a310;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
+
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
+
 .container .checkmark:after {
   top: 6px;
   left: 6px;
