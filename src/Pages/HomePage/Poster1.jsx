@@ -2,7 +2,7 @@ import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 import poster1 from "../../Styles/HomePage.module.css";
 import PickUp from "./PickUp";
-// import PickUp from "./PickUp";
+
 const Poster1 = () => {
   return (
     <Box className={poster1.maincontainer}>
@@ -16,7 +16,7 @@ const Poster1 = () => {
           <img
             src="https://www.zoomcar.com/img/hero-banner-web.png"
             alt="d"
-            // style={{ height: "100%", width: "100%" }}
+      
             height={{ lg: "100%", md: "80%", sm: "60%" }}
             width="100%"
           />

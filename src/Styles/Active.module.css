@@ -1,5 +1,5 @@
 .activeDiv {
-  /* border: 5px solid green; */
+
   width: 100%;
   height: auto;
 }
@@ -9,31 +9,31 @@ b.activeDiv {
 }
 .firstparent {
   width: 100%;
-  /* border: 5px solid rebeccapurple; */
+
 }
 .Cardheader {
   width: 100%;
-  /* border: 1px solid brown; */
+
 }
 
 .firstchild {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  /* border: 2px solid paleturquoise; */
+
   height: 3rem;
   overflow: hidden;
 }
 
 .sidebyside2 {
-  /* border: 2px solid yellow; */
+
   display: flex;
   margin-top: 20px;
   width: 100%;
 }
 
 .sidebyside2_firstchild {
-  /* border: 1px solid black; */
+
   width: 100%;
 }
 

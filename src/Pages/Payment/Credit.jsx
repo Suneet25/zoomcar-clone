@@ -32,7 +32,7 @@ const Credit = () => {
         <div className="CreditMaindivSecond">
           <div style={{ marginTop: "1rem" }}>
             <h1 className="CreditSecondH1">Enter Card Details</h1>
-            {/* <p> Amount: ₹5000.0</p> */}
+         
           </div>
         </div>
 

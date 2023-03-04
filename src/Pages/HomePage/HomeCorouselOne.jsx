@@ -11,40 +11,40 @@ const CorouselOne = () => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 2,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1, 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1, 
     },
   };
 
-  //second responsive
+ 
   const responsive2 = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1, 
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1, 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 1, 
     },
   };
 
-  //second responive box
+ 
   return (
     <>
     <div style={{ display: "grid" }}>
@@ -79,15 +79,13 @@ const CorouselOne = () => {
                   {el.type}
                 </Heading>
               </div>
-              {/* <h1 className={styles.Exploreh1}>{el.type}</h1>
-              <p style={{ color: "#6b6b6b" }}>{el.no_of_item}</p> */}
             </div>
           );
         })}
       </Carousel>
     </div>
 
-    {/* second carausal div */}
+  
     <div style={{ display: "grid" }}>
       <Carousel responsive={responsive2} transitionDuration={1000}>
         {CorouselTwoData.map((el) => {
@@ -120,8 +118,6 @@ const CorouselOne = () => {
                   {el.title}
                 </Heading>
               </div>
-              {/* <h1 className={styles.Exploreh1}>{el.type}</h1>
-              <p style={{ color: "#6b6b6b" }}>{el.no_of_item}</p> */}
             </div>
           );
         })}

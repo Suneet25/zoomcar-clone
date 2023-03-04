@@ -4,7 +4,7 @@ import BANKING from "../../Styles/Banking.module.css";
 const Banking = () => {
   return (
     <div className={BANKING.bankingDiv}>
-      {/* multiple options */}
+   
       <div className={BANKING.optionsDiv}>
         <div>
           <div class={BANKING.image}>

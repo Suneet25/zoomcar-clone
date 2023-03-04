@@ -1,7 +1,7 @@
 .walletDiv {
   margin: auto;
   width: 80%;
-  /* border: 2px solid black; */
+ 
   height: auto;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -13,12 +13,12 @@
 .walletDivMain {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+
   align-items: center;
 }
 
 #lock {
-  /* border: 1px solid red; */
+
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -55,7 +55,7 @@
 #head2 h2 {
   font-weight: 600;
   font-size: 20px;
-  /* padding-left: 1rem; */
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1110px) {
