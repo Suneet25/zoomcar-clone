@@ -1,3 +1,9 @@
+import image1 from "..//Assets/Home-corousel2-img1.png";
+import image2 from "..//Assets/Home-corousel2-img2.png";
+import image3 from "..//Assets/Home-corousel2-img3.png";
+import image4 from "..//Assets/Home-corousel2-img4.png";
+import image5 from "..//Assets/Home-corousel2-img5.png";
+
 export let CorouselOneData = [
   {
     id: 1,
@@ -71,42 +77,35 @@ export let CorouselOneData = [
   },
 ];
 
-
-
 export let CorouselTwoData = [
-    {
-      id: 1,
-      image:
-        "https://zoomcar-assets.zoomcar.com/images/original/d09afb8f29763525cd9823221791be7188b31460.png?1672044204",
-  
-      title: "Enjoy Unlimited Kilometers",
-    },
-    {
-      id: 2,
-      image:
-        "https://zoomcar-assets.zoomcar.com/images/original/92ede006e6e6bf849d2fe715761e3e6833aad5ec.png?1671712552",
-  
-      title: "Zero Security Deposit",
-    },
-    {
-      id: 3,
-      image:
-        "https://zoomcar-assets.zoomcar.com/images/original/ac74c0e87023949496768b9557c52936bc35090b.png?1672044356",
-  
-      title: "100% Free Cancellation ",
-    },
-    {
-      id: 4,
-      image:
-        "https://zoomcar-assets.zoomcar.com/images/original/5d9694e98e7716aab66ea6e0a0f6b7bd7a4958c8.png?1672044544",
-  
-      title: "Zero Toll Charges",
-    },
-    {
-      id: 5,
-      image:
-        "https://zoomcar-assets.zoomcar.com/images/original/bb32fcf3eb9047ee20809f2dbf6e88ae739fb4d9.png?1672044584",
-  
-      title: "Reshedule For Free",
-    },
-  ];
+  {
+    id: 1,
+    image: image1,
+
+    title: "Enjoy Unlimited Kilometers",
+  },
+  {
+    id: 2,
+    image: image2,
+
+    title: "Zero Security Deposit",
+  },
+  {
+    id: 3,
+    image: image3,
+
+    title: "100% Free Cancellation ",
+  },
+  {
+    id: 4,
+    image: image4,
+
+    title: "Zero Toll Charges",
+  },
+  {
+    id: 5,
+    image: image5,
+
+    title: "Reshedule For Free",
+  },
+];

@@ -1,5 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
+import banner from "..//../Assets/Home-banner2.png";
 import poster2 from "../../Styles/HomePage.module.css";
 const Poster2 = () => {
   return (
@@ -9,11 +10,10 @@ const Poster2 = () => {
           style={{
             width: "100%",
             height: "auto",
-       
           }}
         >
           <img
-            src="https://zoomcar-assets.zoomcar.com/images/original/97c77ce8da5affded5e3c4bde712044a90728781.png?1672044755"
+            src={banner}
             alt="d"
             height={{ lg: "100%", md: "80%", sm: "60%" }}
             width="100%"
