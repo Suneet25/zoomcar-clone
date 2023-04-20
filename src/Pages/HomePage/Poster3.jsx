@@ -10,7 +10,7 @@ const Poster3 = () => {
           style={{
             width: "100%",
             height: "auto",
-            // border: "2px solid red",
+          
           }}
         >
           <img src={banner} alt="d" style={{ height: "100%", width: "100%" }} />

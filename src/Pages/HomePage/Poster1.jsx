@@ -3,7 +3,7 @@ import React from "react";
 import banner from "..//../Assets/Home-banner1.png";
 import poster1 from "../../Styles/HomePage.module.css";
 import PickUp from "./PickUp";
-// import PickUp from "./PickUp";
+
 const Poster1 = () => {
   return (
     <Box className={poster1.maincontainer}>
@@ -17,7 +17,7 @@ const Poster1 = () => {
           <img
             src={banner}
             alt="d"
-            // style={{ height: "100%", width: "100%" }}
+      
             height={{ lg: "100%", md: "80%", sm: "60%" }}
             width="100%"
           />

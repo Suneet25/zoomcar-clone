@@ -83,6 +83,7 @@ const SingleCarsPage = () => {
                   style={{ height: "18rem" }}
                   src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   frameborder="0"
+                  title="."
                 ></iframe>
               </div>
               <div className={single.LeftSectionPolicy}>
@@ -181,7 +182,7 @@ const SingleCarsPage = () => {
               </p>
             </div>
             <div className={single.RightSectionPriceandCoupon}>
-              {/* <h1>₹ {data.price}</h1> */}
+            
               <h1>₹ {update > data.price ? update : data.price}</h1>
               <p>🏷️Apply Coupon</p>
             </div>

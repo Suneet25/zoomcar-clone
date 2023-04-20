@@ -9,13 +9,9 @@ import {
   Link,
   Button,
   Heading,
-  Text,
+ 
   Image,
-  useColorModeValue,
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
+
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
@@ -49,7 +45,7 @@ export default function Loginpage() {
         }
       }
       setload(false);
-      if (Auth == false) {
+      if (Auth === false) {
         alert("Please enter right email or password!");
       } else {
         alert("Login Successfull!");
@@ -72,11 +68,8 @@ export default function Loginpage() {
       alignItems={"center"}
     >
       <Stack
-        // border={"1px solid red"}
         spacing={6}
         mx={"auto"}
-        // maxW={"450px"}
-        // py={12}
         px={6}
       >
         <Image src={Logo} alt="logo" marginBottom={"20px"} />
@@ -92,12 +85,6 @@ export default function Loginpage() {
         </Stack>
 
         <Box
-        //   rounded={"lg"}
-        //   bg={useColorModeValue("white", "gray.700")}
-        //   boxShadow={"lg"}
-        //   p={8}
-        //   width={"500px"}
-        //   height={"auto"}
         >
           <Stack spacing={4}>
             <FormControl id="email">

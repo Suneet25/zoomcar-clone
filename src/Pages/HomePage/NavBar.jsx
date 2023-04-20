@@ -2,10 +2,7 @@ import {
   Box,
   Flex,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+ 
   useDisclosure,
   Drawer,
   DrawerBody,
@@ -17,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import navbar from "../../Styles/HomeNavbar.module.css";
 import bumBlebee from "..//..//Assets/bumBlebee.jpg";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { GiTwoCoins } from "react-icons/gi";
 import { TbCoin } from "react-icons/tb";
@@ -30,12 +27,12 @@ import {
   FaRegCopy,
   FaMapMarkerAlt,
   FaPhone,
-  FaCross,
+ 
   FaWindowClose,
 } from "react-icons/fa";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
+
 
 import { AuthContext } from "../../Components/AuthContext";
 import { useContext } from "react";
@@ -47,22 +44,6 @@ const Navbar = () => {
 
   const { name, isAuth, logoutUser } = useContext(AuthContext);
 
-  // const isAuth = useSelector((state) => state.AuthReducer.isAuth);
-
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  // let isAuth = true;
-  // const handleLogout = () => {};
-
-  // const handleLogin = () => {};
-
-  //   useEffect(() => {
-  //
-  //   }, [ dispatch]);
-
-  // let HostClick = () => {
-  //   <Navigate to="/hostpage" />;
-  // };
 
   return (
     <>
@@ -240,7 +221,7 @@ const Navbar = () => {
                           <Text
                             fontSize="16px"
                             cursor="pointer"
-                            // onClick={handleLogout}
+                           
                             onClick={logoutUser}
                           >
                             Logout
@@ -262,14 +243,14 @@ const Navbar = () => {
                 />
               </RouterLink>
             </Flex>
-            {/* ///////////////////////// */}
+           
             <Flex
               minWidth={{ lg: "320px", md: "320px", sm: "10px" }}
               alignItems="center"
               gap="20px"
               direction="row"
               width="auto"
-              // bgColor={"blue"}
+          
             >
               <Box>
                 <Text
@@ -341,7 +322,7 @@ const Navbar = () => {
                 </Text>
               </Box>
             </Flex>
-            {/* ///////////////////////// */}
+    
           </Flex>
         </Box>
       ) : (
@@ -437,7 +418,7 @@ const Navbar = () => {
                           <Text
                             fontSize="16px"
                             cursor="pointer"
-                            // onClick={handleLogin}
+                         
                           >
                             Login
                           </Text>
@@ -458,7 +439,7 @@ const Navbar = () => {
               </RouterLink>
             </Flex>
 
-            {/* //////////////////// */}
+      
 
             <Flex
               minWidth={{ lg: "320px", md: "320px", sm: "10px" }}
@@ -466,7 +447,7 @@ const Navbar = () => {
               gap="20px"
               direction="row"
               width="auto"
-              // border="3px solid red"
+           
             >
               <Box>
                 <Text
@@ -536,7 +517,7 @@ const Navbar = () => {
               </Box>
             </Flex>
 
-            {/* /////////////////// */}
+         
           </Flex>
         </Box>
       )}

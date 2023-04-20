@@ -4,7 +4,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid red; */
+
 }
 
 .payDiv > div:nth-child(1) {
@@ -17,24 +17,23 @@
   border-radius: 10px;
   display: flex;
   cursor: pointer;
-  /* border: 1px solid blue; */
+ 
 }
 
 .payDiv > div:nth-child(1) > div:nth-child(1) {
   width: 35%;
-  /* border: 1px solid black; */
-  /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+
 }
 
 .payDiv > div:nth-child(1) > div:nth-child(2) {
   width: 65%;
   padding: 0 1rem;
-  /* border: 1px solid pink; */
+ 
 }
 
 .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
   width: 100%;
-  /* border: 1px solid green; */
+
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -42,7 +41,7 @@
 
 .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
   width: 100%;
-  /* border: 1px solid orange; */
+
   margin-top: 20px;
   display: flex;
 }
@@ -53,7 +52,7 @@
   > div:nth-child(2)
   > div:nth-child(1) {
   width: 70%;
-  /* border: 1px solid blue; */
+ 
 }
 
 .payDiv > div:nth-child(2) {
@@ -140,11 +139,11 @@ h2 {
   .payDiv > div:nth-child(1) > div:nth-child(2) {
     width: 90%;
     padding: 0 1rem;
-    /* border: 1px solid pink; */
+
   }
   .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
     width: 100%;
-    /* border: 1px solid orange; */
+   
     margin-top: 20px;
     display: block;
     margin-top: 1rem;
@@ -208,7 +207,7 @@ h2 {
   }
   .payDiv > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
     width: 100%;
-    /* border: 1px solid orange; */
+ 
     margin-top: 20px;
     display: block;
     margin-top: 1rem;
@@ -222,7 +221,7 @@ h2 {
   }
 }
 
-/* Test */
+
 @media only screen and (min-width: 769px) and (max-width: 1080px) {
 }
 
